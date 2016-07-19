@@ -1,0 +1,4187 @@
+{
+    "settings": {
+        "font": "helvetica",
+        "fontSize": "11px",
+        "padAngle": 0,
+        "textDistance": 12,
+        "matchDrugs": true
+    },
+    "layers": {
+        "content": [
+            {
+                "layer": "Chromosomes",
+                "dataId": "ideogram",
+                "type": "heatmapTextLayer",
+                "placement": 270,
+                "width": 30,
+                "opacity": 0.8
+            },
+            {
+                "layer": "Small Chromosomes",
+                "dataId": "ideogram2",
+                "type": "heatmapLayer",
+                "placement": 180,
+                "width": 5,
+                "opacity": 0.4
+            },
+            {
+                "layer": "Mutations",
+                "dataId": "mutationLabels",
+                "type": "labelsLayer",
+                "placement": 300,
+                "width": 50,
+                "opacity": 1,
+                "filters": [
+                    {
+                        "name": "Quality Score",
+                        "field": "snvindelqual",
+                        "value": 20,
+                        "type": "range",
+                        "min": 0,
+                        "max": 400,
+                        "step": 1
+                    },
+                    {
+                        "name": "Log2 Scores",
+                        "field": "logqual",
+                        "value": 0,
+                        "type": "range",
+                        "min": 0,
+                        "max": 12,
+                        "step": 1
+                    },
+                    {
+                        "name": "Level 2",
+                        "field": "level2",
+                        "checkboxVal": false,
+                        "type": "checkbox"
+                    },
+                    {
+                        "name": "Drug Rules",
+                        "field": "drug_rule",
+                        "checkboxVal": false,
+                        "type": "checkbox"
+                    }
+                ]
+            },
+            {
+                "layer": "Translocations",
+                "dataId": "translocations",
+                "type": "linkLayer",
+                "placement": 325,
+                "width": 20,
+                "opacity": 1
+            },
+            {
+                "layer": "CNVs",
+                "dataId": "cnvTrack",
+                "type": "heatmapLayer",
+                "placement": 230,
+                "width": 15,
+                "opacity": 1
+            }
+        ]
+    },
+    "data": {
+        "content": [
+            {
+                "dataId": "ideogram",
+                "filters": [],
+                "dataContent": [
+                    {
+                        "start": 1,
+                        "end": 28.543076085823277,
+                        "text": [
+                            {
+                                "val": "1",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#3182bd"
+                    },
+                    {
+                        "start": 28.772107218996045,
+                        "end": 56.62222121154459,
+                        "text": [
+                            {
+                                "val": "2",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#6baed6"
+                    },
+                    {
+                        "start": 56.85125234471736,
+                        "end": 79.5279031129801,
+                        "text": [
+                            {
+                                "val": "3",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#9ecae1"
+                    },
+                    {
+                        "start": 79.75693424615287,
+                        "end": 101.64707446770305,
+                        "text": [
+                            {
+                                "val": "4",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#c6dbef"
+                    },
+                    {
+                        "start": 101.87610560087582,
+                        "end": 122.59371910389895,
+                        "text": [
+                            {
+                                "val": "5",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#e6550d"
+                    },
+                    {
+                        "start": 122.82275023707172,
+                        "end": 142.41808908604392,
+                        "text": [
+                            {
+                                "val": "6",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#fd8d3c"
+                    },
+                    {
+                        "start": 142.6471202192167,
+                        "end": 160.87097437846145,
+                        "text": [
+                            {
+                                "val": "7",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#fdae6b"
+                    },
+                    {
+                        "start": 161.10000551163424,
+                        "end": 177.8609644188263,
+                        "text": [
+                            {
+                                "val": "8",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#fdd0a2"
+                    },
+                    {
+                        "start": 178.0899955519991,
+                        "end": 194.26113161257146,
+                        "text": [
+                            {
+                                "val": "9",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#31a354"
+                    },
+                    {
+                        "start": 194.49016274574421,
+                        "end": 210.01100109059155,
+                        "text": [
+                            {
+                                "val": "10",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#74c476"
+                    },
+                    {
+                        "start": 210.24003222376433,
+                        "end": 225.70037989635816,
+                        "text": [
+                            {
+                                "val": "11",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#a1d99b"
+                    },
+                    {
+                        "start": 225.9294110295309,
+                        "end": 241.25753662411722,
+                        "text": [
+                            {
+                                "val": "12",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#c7e9c0"
+                    },
+                    {
+                        "start": 241.48656775728998,
+                        "end": 254.67531159014482,
+                        "text": [
+                            {
+                                "val": "13",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#756bb1"
+                    },
+                    {
+                        "start": 254.90434272331757,
+                        "end": 267.1975361192054,
+                        "text": [
+                            {
+                                "val": "14",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#9e9ac8"
+                    },
+                    {
+                        "start": 267.4265672523781,
+                        "end": 279.16800770014885,
+                        "text": [
+                            {
+                                "val": "15",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#bcbddc"
+                    },
+                    {
+                        "start": 279.39703883332163,
+                        "end": 289.7440645668895,
+                        "text": [
+                            {
+                                "val": "16",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#dadaeb"
+                    },
+                    {
+                        "start": 289.97309570006223,
+                        "end": 299.27121117731275,
+                        "text": [
+                            {
+                                "val": "17",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#636363"
+                    },
+                    {
+                        "start": 299.50024231048553,
+                        "end": 308.44130260271123,
+                        "text": [
+                            {
+                                "val": "18",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#969696"
+                    },
+                    {
+                        "start": 308.67033373588396,
+                        "end": 315.44152272580567,
+                        "text": [
+                            {
+                                "val": "19",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#bdbdbd"
+                    },
+                    {
+                        "start": 315.67055385897845,
+                        "end": 322.88795699118,
+                        "text": [
+                            {
+                                "val": "20",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#d9d9d9"
+                    },
+                    {
+                        "start": 323.11698812435276,
+                        "end": 328.628610320021,
+                        "text": [
+                            {
+                                "val": "21",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#3182bd"
+                    },
+                    {
+                        "start": 328.85764145319376,
+                        "end": 334.7328128971523,
+                        "text": [
+                            {
+                                "val": "22",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#6baed6"
+                    },
+                    {
+                        "start": 334.9618440303251,
+                        "end": 352.7427401829104,
+                        "text": [
+                            {
+                                "val": "X",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#9ecae1"
+                    },
+                    {
+                        "start": 352.9717713160831,
+                        "end": 359.7709688668272,
+                        "text": [
+                            {
+                                "val": "Y",
+                                "offset": 0.5
+                            }
+                        ],
+                        "color": "#c6dbef"
+                    }
+                ]
+            },
+            {
+                "dataId": "ideogram2",
+                "filters": [],
+                "dataContent": [
+                    {
+                        "start": 1,
+                        "end": 28.543076085823277,
+                        "value": 1,
+                        "color": "#3182bd"
+                    },
+                    {
+                        "start": 28.772107218996045,
+                        "end": 56.62222121154459,
+                        "value": 1,
+                        "color": "#6baed6"
+                    },
+                    {
+                        "start": 56.85125234471736,
+                        "end": 79.5279031129801,
+                        "value": 1,
+                        "color": "#9ecae1"
+                    },
+                    {
+                        "start": 79.75693424615287,
+                        "end": 101.64707446770305,
+                        "value": 1,
+                        "color": "#c6dbef"
+                    },
+                    {
+                        "start": 101.87610560087582,
+                        "end": 122.59371910389895,
+                        "value": 1,
+                        "color": "#e6550d"
+                    },
+                    {
+                        "start": 122.82275023707172,
+                        "end": 142.41808908604392,
+                        "value": 1,
+                        "color": "#fd8d3c"
+                    },
+                    {
+                        "start": 142.6471202192167,
+                        "end": 160.87097437846145,
+                        "value": 1,
+                        "color": "#fdae6b"
+                    },
+                    {
+                        "start": 161.10000551163424,
+                        "end": 177.8609644188263,
+                        "value": 1,
+                        "color": "#fdd0a2"
+                    },
+                    {
+                        "start": 178.0899955519991,
+                        "end": 194.26113161257146,
+                        "value": 1,
+                        "color": "#31a354"
+                    },
+                    {
+                        "start": 194.49016274574421,
+                        "end": 210.01100109059155,
+                        "value": 1,
+                        "color": "#74c476"
+                    },
+                    {
+                        "start": 210.24003222376433,
+                        "end": 225.70037989635816,
+                        "value": 1,
+                        "color": "#a1d99b"
+                    },
+                    {
+                        "start": 225.9294110295309,
+                        "end": 241.25753662411722,
+                        "value": 1,
+                        "color": "#c7e9c0"
+                    },
+                    {
+                        "start": 241.48656775728998,
+                        "end": 254.67531159014482,
+                        "value": 1,
+                        "color": "#756bb1"
+                    },
+                    {
+                        "start": 254.90434272331757,
+                        "end": 267.1975361192054,
+                        "value": 1,
+                        "color": "#9e9ac8"
+                    },
+                    {
+                        "start": 267.4265672523781,
+                        "end": 279.16800770014885,
+                        "value": 1,
+                        "color": "#bcbddc"
+                    },
+                    {
+                        "start": 279.39703883332163,
+                        "end": 289.7440645668895,
+                        "value": 1,
+                        "color": "#dadaeb"
+                    },
+                    {
+                        "start": 289.97309570006223,
+                        "end": 299.27121117731275,
+                        "value": 1,
+                        "color": "#636363"
+                    },
+                    {
+                        "start": 299.50024231048553,
+                        "end": 308.44130260271123,
+                        "value": 1,
+                        "color": "#969696"
+                    },
+                    {
+                        "start": 308.67033373588396,
+                        "end": 315.44152272580567,
+                        "value": 1,
+                        "color": "#bdbdbd"
+                    },
+                    {
+                        "start": 315.67055385897845,
+                        "end": 322.88795699118,
+                        "value": 1,
+                        "color": "#d9d9d9"
+                    },
+                    {
+                        "start": 323.11698812435276,
+                        "end": 328.628610320021,
+                        "value": 1,
+                        "color": "#3182bd"
+                    },
+                    {
+                        "start": 328.85764145319376,
+                        "end": 334.7328128971523,
+                        "value": 1,
+                        "color": "#6baed6"
+                    },
+                    {
+                        "start": 334.9618440303251,
+                        "end": 352.7427401829104,
+                        "value": 1,
+                        "color": "#9ecae1"
+                    },
+                    {
+                        "start": 352.9717713160831,
+                        "end": 359.7709688668272,
+                        "value": 1,
+                        "color": "#c6dbef"
+                    }
+                ]
+            },
+            {
+                "dataId": "mutationLabels",
+                "dataContent": [
+                    {
+                        "start": 202.15083616855534,
+                        "end": 202.16083616855533,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "CTNNA3 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1227,
+                            "drug_flag": false,
+                            "gene": "CTNNA3",
+                            "effect": "CTNNA3 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr10:66896350",
+                            "group": ""
+                        }
+                    },
+                    {
+                        "start": 202.90005998872508,
+                        "end": 202.91005998872507,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "DDIT4 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1282,
+                            "drug_flag": false,
+                            "gene": "DDIT4",
+                            "effect": "DDIT4 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr10:73438900",
+                            "group": ""
+                        }
+                    },
+                    {
+                        "start": 247.11228238452605,
+                        "end": 247.12228238452605,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "RB1 (Breakpoint)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 99,
+                            "drug_flag": true,
+                            "gene": "RB1",
+                            "effect": "RB1 (Breakpoint)",
+                            "level2": true,
+                            "type": "StructuralVariant",
+                            "chrPos": "chr13:49126200",
+                            "group": ""
+                        }
+                    },
+                    {
+                        "start": 293.3614797369674,
+                        "end": 293.3714797369674,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "NF1 (S1567*)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "snvindelqual": 52.9,
+                            "drug_flag": false,
+                            "gene": "NF1",
+                            "effect": "NF1 (S1567*)",
+                            "level2": true,
+                            "type": "SNV",
+                            "chrPos": "chr17:29588851",
+                            "group": ""
+                        }
+                    },
+                    {
+                        "start": 21.33686100996167,
+                        "end": 21.34686100996167,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "TPR (Breakpoint)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 36,
+                            "drug_flag": false,
+                            "gene": "TPR",
+                            "effect": "TPR (Breakpoint)",
+                            "level2": true,
+                            "type": "StructuralVariant",
+                            "chrPos": "chr1:186322800",
+                            "group": ""
+                        }
+                    },
+                    {
+                        "start": -31.585897503866732,
+                        "end": -31.57589750386674,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "BCR (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1412,
+                            "drug_flag": false,
+                            "gene": "BCR",
+                            "effect": "BCR (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr22:23114800",
+                            "group": ""
+                        },
+                        "xPos": -182,
+                        "yPos": -296,
+                        "startAngle": -2.1220742354348294,
+                        "endAngle": -2.1220742354348294,
+                        "line_x1": -139.73058585643065,
+                        "line_y1": -256.5532030108774
+                    },
+                    {
+                        "start": 333.3316673014922,
+                        "end": 333.3416673014922,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "PDGFB (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1342,
+                            "drug_flag": false,
+                            "gene": "PDGFB",
+                            "effect": "PDGFB (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr22:39069150",
+                            "group": ""
+                        }
+                    },
+                    {
+                        "start": 334.5316673014922,
+                        "end": 334.54166730149217,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "TAB1 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1342,
+                            "drug_flag": false,
+                            "gene": "TAB1",
+                            "effect": "TAB1 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr22:39069150",
+                            "group": 8
+                        }
+                    },
+                    {
+                        "start": 335.73166730149217,
+                        "end": 335.74166730149216,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "MKL1 (Gained 1.2)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1608,
+                            "drug_flag": false,
+                            "gene": "MKL1",
+                            "effect": "MKL1 (Gained 1.2)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr22:40161600",
+                            "group": 8
+                        }
+                    },
+                    {
+                        "start": -19.994492805437105,
+                        "end": -19.984492805437114,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "RBX1 (Gained 1.2)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1608,
+                            "drug_flag": false,
+                            "gene": "RBX1",
+                            "effect": "RBX1 (Gained 1.2)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr22:40161600",
+                            "group": 8
+                        },
+                        "xPos": -147,
+                        "yPos": -404,
+                        "startAngle": -1.919766058516092,
+                        "endAngle": -1.919766058516092,
+                        "line_x1": -170.93085652134104,
+                        "line_y1": -357.7327115207623
+                    },
+                    {
+                        "start": 135.70535685739756,
+                        "end": 135.71535685739755,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "LAMA4 (R440W)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "snvindelqual": 51,
+                            "drug_flag": false,
+                            "gene": "LAMA4",
+                            "effect": "LAMA4 (R440W)",
+                            "level2": true,
+                            "type": "SNV",
+                            "chrPos": "chr6:112496554",
+                            "group": ""
+                        }
+                    },
+                    {
+                        "start": 127.01628165657348,
+                        "end": 127.02628165657349,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "CDKN1A (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "CDKN1A",
+                            "effect": "CDKN1A (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": ""
+                        }
+                    },
+                    {
+                        "start": 128.21628165657347,
+                        "end": 128.22628165657346,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "PIM1 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "PIM1",
+                            "effect": "PIM1 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 129.41628165657346,
+                        "end": 129.42628165657345,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "DAAM2 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "DAAM2",
+                            "effect": "DAAM2 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 130.61628165657345,
+                        "end": 130.62628165657344,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "TFEB (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "TFEB",
+                            "effect": "TFEB (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 131.81628165657344,
+                        "end": 131.82628165657343,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "CCND3 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "CCND3",
+                            "effect": "CCND3 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 133.01628165657343,
+                        "end": 133.02628165657342,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "PTCRA (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "PTCRA",
+                            "effect": "PTCRA (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 134.21628165657341,
+                        "end": 134.2262816565734,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "PPP2R5D (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "PPP2R5D",
+                            "effect": "PPP2R5D (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 135.4162816565734,
+                        "end": 135.4262816565734,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "SRF (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "SRF",
+                            "effect": "SRF (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 136.6162816565734,
+                        "end": 136.62628165657338,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "VEGFA (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": true,
+                            "gene": "VEGFA",
+                            "effect": "VEGFA (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 137.81628165657338,
+                        "end": 137.82628165657337,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "HSP90AB1 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "HSP90AB1",
+                            "effect": "HSP90AB1 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 139.01628165657337,
+                        "end": 139.02628165657336,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "MCM3 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "MCM3",
+                            "effect": "MCM3 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 140.21628165657336,
+                        "end": 140.22628165657335,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "BMP5 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "BMP5",
+                            "effect": "BMP5 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 141.41628165657335,
+                        "end": 141.42628165657334,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "RAB23 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "RAB23",
+                            "effect": "RAB23 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 142.61628165657334,
+                        "end": 142.62628165657333,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "PRIM2 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.0879,
+                            "drug_flag": false,
+                            "gene": "PRIM2",
+                            "effect": "PRIM2 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr6:36619750",
+                            "group": 15
+                        }
+                    },
+                    {
+                        "start": 177.2794346750232,
+                        "end": 177.2894346750232,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "PTK2 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1405,
+                            "drug_flag": false,
+                            "gene": "PTK2",
+                            "effect": "PTK2 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr8:141285850",
+                            "group": ""
+                        }
+                    },
+                    {
+                        "start": 178.47943467502319,
+                        "end": 178.48943467502318,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "BAI1 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1196,
+                            "drug_flag": false,
+                            "gene": "BAI1",
+                            "effect": "BAI1 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr8:142434700",
+                            "group": 29
+                        }
+                    },
+                    {
+                        "start": 179.67943467502317,
+                        "end": 179.68943467502316,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "RECQL4 (Gained 1.1)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1196,
+                            "drug_flag": false,
+                            "gene": "RECQL4",
+                            "effect": "RECQL4 (Gained 1.1)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr8:142434700",
+                            "group": 29
+                        }
+                    },
+                    {
+                        "start": 166.5684559112772,
+                        "end": 166.5784559112772,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "PRKDC (Gained 1.2)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1777,
+                            "drug_flag": false,
+                            "gene": "PRKDC",
+                            "effect": "PRKDC (Gained 1.2)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr8:47752900",
+                            "group": ""
+                        }
+                    },
+                    {
+                        "start": 167.7684559112772,
+                        "end": 167.77845591127718,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "MCM4 (Gained 1.2)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.1777,
+                            "drug_flag": false,
+                            "gene": "MCM4",
+                            "effect": "MCM4 (Gained 1.2)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr8:47752900",
+                            "group": 32
+                        }
+                    },
+                    {
+                        "start": 194.09865337671613,
+                        "end": 194.10865337671612,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "TRAF2 (Gained 1.4)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.3704,
+                            "drug_flag": false,
+                            "gene": "TRAF2",
+                            "effect": "TRAF2 (Gained 1.4)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr9:139794600",
+                            "group": ""
+                        }
+                    },
+                    {
+                        "start": 195.29865337671612,
+                        "end": 195.3086533767161,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "ANAPC2 (Gained 1.4)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 1.3704,
+                            "drug_flag": false,
+                            "gene": "ANAPC2",
+                            "effect": "ANAPC2 (Gained 1.4)",
+                            "level2": true,
+                            "type": "FocalGain",
+                            "chrPos": "chr9:139794600",
+                            "group": 34
+                        }
+                    },
+                    {
+                        "start": 180.60555900320222,
+                        "end": 180.6155590032022,
+                        "displayLabel": true,
+                        "elementFontSize": "10px",
+                        "text": [
+                            {
+                                "val": "CDKN2A (Deleted -3.2)",
+                                "offset": 0
+                            }
+                        ],
+                        "attributes": {
+                            "logqual": 3.2079,
+                            "drug_flag": true,
+                            "gene": "CDKN2A",
+                            "effect": "CDKN2A (Deleted -3.2)",
+                            "level2": true,
+                            "type": "FocalDeletion",
+                            "chrPos": "chr9:21967000",
+                            "group": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "dataId": "translocations",
+                "filters": [],
+                "dataContent": [
+                    {
+                        "start": 262.8507840167667,
+                        "end": 262.8607840167667,
+                        "color": "purple",
+                        "connection": 0,
+                        "qual": 259,
+                        "attributes": {
+                            "svCoordinate": "-:14:69391800|+:14:69528600",
+                            "gene": "DCAF5",
+                            "effect": "DCAF5 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 262.8664497462757,
+                        "end": 262.8764497462757,
+                        "color": "purple",
+                        "connection": 0,
+                        "qual": 259,
+                        "attributes": {
+                            "svCoordinate": "-:14:69391800|+:14:69528600",
+                            "gene": "DCAF5",
+                            "effect": "DCAF5 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 262.8507840167667,
+                        "end": 262.8607840167667,
+                        "color": "purple",
+                        "connection": 1,
+                        "qual": 259,
+                        "attributes": {
+                            "svCoordinate": "-:14:69391800|+:14:69528600",
+                            "gene": "ACTN1",
+                            "effect": "ACTN1 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 262.8664497462757,
+                        "end": 262.8764497462757,
+                        "color": "purple",
+                        "connection": 1,
+                        "qual": 259,
+                        "attributes": {
+                            "svCoordinate": "-:14:69391800|+:14:69528600",
+                            "gene": "ACTN1",
+                            "effect": "ACTN1 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 262.8507840167667,
+                        "end": 262.8607840167667,
+                        "color": "purple",
+                        "connection": 2,
+                        "qual": 259,
+                        "attributes": {
+                            "svCoordinate": "-:14:69391800|+:14:69528600",
+                            "gene": "DCAF5_ACTN1",
+                            "effect": "DCAF5_ACTN1 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 262.8664497462757,
+                        "end": 262.8764497462757,
+                        "color": "purple",
+                        "connection": 2,
+                        "qual": 259,
+                        "attributes": {
+                            "svCoordinate": "-:14:69391800|+:14:69528600",
+                            "gene": "DCAF5_ACTN1",
+                            "effect": "DCAF5_ACTN1 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 262.8507840167667,
+                        "end": 262.8607840167667,
+                        "color": "purple",
+                        "connection": 3,
+                        "qual": 259,
+                        "attributes": {
+                            "svCoordinate": "-:14:69391800|+:14:69528600",
+                            "gene": "ACTN1_DCAF5",
+                            "effect": "ACTN1_DCAF5 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 262.8664497462757,
+                        "end": 262.8764497462757,
+                        "color": "purple",
+                        "connection": 3,
+                        "qual": 259,
+                        "attributes": {
+                            "svCoordinate": "-:14:69391800|+:14:69528600",
+                            "gene": "ACTN1_DCAF5",
+                            "effect": "ACTN1_DCAF5 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 247.09860922587563,
+                        "end": 247.10860922587563,
+                        "color": "purple",
+                        "connection": 4,
+                        "qual": 99,
+                        "attributes": {
+                            "svCoordinate": "-:13:49006800|+:13:49126200",
+                            "gene": "RB1",
+                            "effect": "RB1 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 247.11228238452605,
+                        "end": 247.12228238452605,
+                        "color": "purple",
+                        "connection": 4,
+                        "qual": 99,
+                        "attributes": {
+                            "svCoordinate": "-:13:49006800|+:13:49126200",
+                            "gene": "RB1",
+                            "effect": "RB1 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 247.09860922587563,
+                        "end": 247.10860922587563,
+                        "color": "purple",
+                        "connection": 5,
+                        "qual": 99,
+                        "attributes": {
+                            "svCoordinate": "-:13:49006800|+:13:49126200",
+                            "gene": "LPAR6",
+                            "effect": "LPAR6 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 247.11228238452605,
+                        "end": 247.12228238452605,
+                        "color": "purple",
+                        "connection": 5,
+                        "qual": 99,
+                        "attributes": {
+                            "svCoordinate": "-:13:49006800|+:13:49126200",
+                            "gene": "LPAR6",
+                            "effect": "LPAR6 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 282.9957592226387,
+                        "end": 283.0057592226387,
+                        "color": "purple",
+                        "connection": 6,
+                        "qual": 84,
+                        "attributes": {
+                            "svCoordinate": "-:16:31425600|+:16:31555800",
+                            "gene": "ITGAD",
+                            "effect": "ITGAD (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 283.0106691494083,
+                        "end": 283.02066914940826,
+                        "color": "purple",
+                        "connection": 6,
+                        "qual": 84,
+                        "attributes": {
+                            "svCoordinate": "-:16:31425600|+:16:31555800",
+                            "gene": "ITGAD",
+                            "effect": "ITGAD (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 279.7963088077817,
+                        "end": 279.8063088077817,
+                        "color": "purple",
+                        "connection": 7,
+                        "qual": 67,
+                        "attributes": {
+                            "svCoordinate": "-:16:3486600|+:16:3525000",
+                            "gene": "NAA60",
+                            "effect": "NAA60 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 279.80070620553863,
+                        "end": 279.8107062055386,
+                        "color": "purple",
+                        "connection": 7,
+                        "qual": 67,
+                        "attributes": {
+                            "svCoordinate": "-:16:3486600|+:16:3525000",
+                            "gene": "NAA60",
+                            "effect": "NAA60 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 279.7963088077817,
+                        "end": 279.8063088077817,
+                        "color": "purple",
+                        "connection": 8,
+                        "qual": 67,
+                        "attributes": {
+                            "svCoordinate": "-:16:3486600|+:16:3525000",
+                            "gene": "ZNF597",
+                            "effect": "ZNF597 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 279.80070620553863,
+                        "end": 279.8107062055386,
+                        "color": "purple",
+                        "connection": 8,
+                        "qual": 67,
+                        "attributes": {
+                            "svCoordinate": "-:16:3486600|+:16:3525000",
+                            "gene": "ZNF597",
+                            "effect": "ZNF597 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 33.74803761830764,
+                        "end": 33.75803761830764,
+                        "color": "purple",
+                        "connection": 9,
+                        "qual": 81,
+                        "attributes": {
+                            "svCoordinate": "-:2:43452000|+:2:43579800",
+                            "gene": "THADA",
+                            "effect": "THADA (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 33.76267270771738,
+                        "end": 33.772672707717376,
+                        "color": "purple",
+                        "connection": 9,
+                        "qual": 81,
+                        "attributes": {
+                            "svCoordinate": "-:2:43452000|+:2:43579800",
+                            "gene": "THADA",
+                            "effect": "THADA (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 33.74803761830764,
+                        "end": 33.75803761830764,
+                        "color": "purple",
+                        "connection": 10,
+                        "qual": 81,
+                        "attributes": {
+                            "svCoordinate": "-:2:43452000|+:2:43579800",
+                            "gene": "ZFP36L2",
+                            "effect": "ZFP36L2 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 33.76267270771738,
+                        "end": 33.772672707717376,
+                        "color": "purple",
+                        "connection": 10,
+                        "qual": 81,
+                        "attributes": {
+                            "svCoordinate": "-:2:43452000|+:2:43579800",
+                            "gene": "ZFP36L2",
+                            "effect": "ZFP36L2 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 160.05662406687165,
+                        "end": 160.06662406687164,
+                        "color": "purple",
+                        "connection": 11,
+                        "qual": 42,
+                        "attributes": {
+                            "svCoordinate": "+:7:152027400|-:7:152029800",
+                            "gene": "KMT2C",
+                            "effect": "KMT2C (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 160.05689890423147,
+                        "end": 160.06689890423146,
+                        "color": "purple",
+                        "connection": 11,
+                        "qual": 42,
+                        "attributes": {
+                            "svCoordinate": "+:7:152027400|-:7:152029800",
+                            "gene": "KMT2C",
+                            "effect": "KMT2C (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 331.01868761335874,
+                        "end": 331.0286876133587,
+                        "color": "purple",
+                        "connection": 12,
+                        "qual": 25,
+                        "attributes": {
+                            "svCoordinate": "+:22:18871200|-:22:38229600",
+                            "gene": "ANKRD54",
+                            "effect": "ANKRD54 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 333.23552575756463,
+                        "end": 333.2455257575646,
+                        "color": "purple",
+                        "connection": 12,
+                        "qual": 25,
+                        "attributes": {
+                            "svCoordinate": "+:22:18871200|-:22:38229600",
+                            "gene": "ANKRD54",
+                            "effect": "ANKRD54 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 45.93199003460601,
+                        "end": 45.94199003460601,
+                        "color": "purple",
+                        "connection": 13,
+                        "qual": 25,
+                        "attributes": {
+                            "svCoordinate": "+:2:149847600|-:2:149251200",
+                            "gene": "KIF5C",
+                            "effect": "KIF5C (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 45.86369295069389,
+                        "end": 45.873692950693886,
+                        "color": "purple",
+                        "connection": 13,
+                        "qual": 25,
+                        "attributes": {
+                            "svCoordinate": "+:2:149847600|-:2:149251200",
+                            "gene": "KIF5C",
+                            "effect": "KIF5C (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 45.93199003460601,
+                        "end": 45.94199003460601,
+                        "color": "purple",
+                        "connection": 14,
+                        "qual": 25,
+                        "attributes": {
+                            "svCoordinate": "+:2:149847600|-:2:149251200",
+                            "gene": "MBD5",
+                            "effect": "MBD5 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 45.86369295069389,
+                        "end": 45.873692950693886,
+                        "color": "purple",
+                        "connection": 14,
+                        "qual": 25,
+                        "attributes": {
+                            "svCoordinate": "+:2:149847600|-:2:149251200",
+                            "gene": "MBD5",
+                            "effect": "MBD5 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 45.93199003460601,
+                        "end": 45.94199003460601,
+                        "color": "purple",
+                        "connection": 15,
+                        "qual": 25,
+                        "attributes": {
+                            "svCoordinate": "+:2:149847600|-:2:149251200",
+                            "gene": "KIF5C_MBD5",
+                            "effect": "KIF5C_MBD5 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 45.86369295069389,
+                        "end": 45.873692950693886,
+                        "color": "purple",
+                        "connection": 15,
+                        "qual": 25,
+                        "attributes": {
+                            "svCoordinate": "+:2:149847600|-:2:149251200",
+                            "gene": "KIF5C_MBD5",
+                            "effect": "KIF5C_MBD5 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 45.93199003460601,
+                        "end": 45.94199003460601,
+                        "color": "purple",
+                        "connection": 16,
+                        "qual": 25,
+                        "attributes": {
+                            "svCoordinate": "+:2:149847600|-:2:149251200",
+                            "gene": "MBD5_KIF5C",
+                            "effect": "MBD5_KIF5C (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 45.86369295069389,
+                        "end": 45.873692950693886,
+                        "color": "purple",
+                        "connection": 16,
+                        "qual": 25,
+                        "attributes": {
+                            "svCoordinate": "+:2:149847600|-:2:149251200",
+                            "gene": "MBD5_KIF5C",
+                            "effect": "MBD5_KIF5C (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 21.331913937485137,
+                        "end": 21.34191393748514,
+                        "color": "purple",
+                        "connection": 17,
+                        "qual": 36,
+                        "attributes": {
+                            "svCoordinate": "-:1:186279600|+:1:186322800",
+                            "gene": "TPR",
+                            "effect": "TPR (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 21.33686100996167,
+                        "end": 21.34686100996167,
+                        "color": "purple",
+                        "connection": 17,
+                        "qual": 36,
+                        "attributes": {
+                            "svCoordinate": "-:1:186279600|+:1:186322800",
+                            "gene": "TPR",
+                            "effect": "TPR (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 21.331913937485137,
+                        "end": 21.34191393748514,
+                        "color": "purple",
+                        "connection": 18,
+                        "qual": 36,
+                        "attributes": {
+                            "svCoordinate": "-:1:186279600|+:1:186322800",
+                            "gene": "PRG4",
+                            "effect": "PRG4 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 21.33686100996167,
+                        "end": 21.34686100996167,
+                        "color": "purple",
+                        "connection": 18,
+                        "qual": 36,
+                        "attributes": {
+                            "svCoordinate": "-:1:186279600|+:1:186322800",
+                            "gene": "PRG4",
+                            "effect": "PRG4 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 21.331913937485137,
+                        "end": 21.34191393748514,
+                        "color": "purple",
+                        "connection": 19,
+                        "qual": 36,
+                        "attributes": {
+                            "svCoordinate": "-:1:186279600|+:1:186322800",
+                            "gene": "TPR_PRG4",
+                            "effect": "TPR_PRG4 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 21.33686100996167,
+                        "end": 21.34686100996167,
+                        "color": "purple",
+                        "connection": 19,
+                        "qual": 36,
+                        "attributes": {
+                            "svCoordinate": "-:1:186279600|+:1:186322800",
+                            "gene": "TPR_PRG4",
+                            "effect": "TPR_PRG4 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 21.331913937485137,
+                        "end": 21.34191393748514,
+                        "color": "purple",
+                        "connection": 20,
+                        "qual": 36,
+                        "attributes": {
+                            "svCoordinate": "-:1:186279600|+:1:186322800",
+                            "gene": "PRG4_TPR",
+                            "effect": "PRG4_TPR (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 21.33686100996167,
+                        "end": 21.34686100996167,
+                        "color": "purple",
+                        "connection": 20,
+                        "qual": 36,
+                        "attributes": {
+                            "svCoordinate": "-:1:186279600|+:1:186322800",
+                            "gene": "PRG4_TPR",
+                            "effect": "PRG4_TPR (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 211.32220432800565,
+                        "end": 211.33220432800564,
+                        "color": "purple",
+                        "connection": 21,
+                        "qual": 31,
+                        "attributes": {
+                            "svCoordinate": "-:11:9450000|+:11:9171000",
+                            "gene": "DENND5A",
+                            "effect": "DENND5A (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 211.29025448492806,
+                        "end": 211.30025448492805,
+                        "color": "purple",
+                        "connection": 21,
+                        "qual": 31,
+                        "attributes": {
+                            "svCoordinate": "-:11:9450000|+:11:9171000",
+                            "gene": "DENND5A",
+                            "effect": "DENND5A (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 211.32220432800565,
+                        "end": 211.33220432800564,
+                        "color": "purple",
+                        "connection": 22,
+                        "qual": 31,
+                        "attributes": {
+                            "svCoordinate": "-:11:9450000|+:11:9171000",
+                            "gene": "IPO7",
+                            "effect": "IPO7 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 211.29025448492806,
+                        "end": 211.30025448492805,
+                        "color": "purple",
+                        "connection": 22,
+                        "qual": 31,
+                        "attributes": {
+                            "svCoordinate": "-:11:9450000|+:11:9171000",
+                            "gene": "IPO7",
+                            "effect": "IPO7 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 211.32220432800565,
+                        "end": 211.33220432800564,
+                        "color": "purple",
+                        "connection": 23,
+                        "qual": 31,
+                        "attributes": {
+                            "svCoordinate": "-:11:9450000|+:11:9171000",
+                            "gene": "DENND5A_IPO7",
+                            "effect": "DENND5A_IPO7 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 211.29025448492806,
+                        "end": 211.30025448492805,
+                        "color": "purple",
+                        "connection": 23,
+                        "qual": 31,
+                        "attributes": {
+                            "svCoordinate": "-:11:9450000|+:11:9171000",
+                            "gene": "DENND5A_IPO7",
+                            "effect": "DENND5A_IPO7 (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 211.32220432800565,
+                        "end": 211.33220432800564,
+                        "color": "purple",
+                        "connection": 24,
+                        "qual": 31,
+                        "attributes": {
+                            "svCoordinate": "-:11:9450000|+:11:9171000",
+                            "gene": "IPO7_DENND5A",
+                            "effect": "IPO7_DENND5A (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    },
+                    {
+                        "start": 211.29025448492806,
+                        "end": 211.30025448492805,
+                        "color": "purple",
+                        "connection": 24,
+                        "qual": 31,
+                        "attributes": {
+                            "svCoordinate": "-:11:9450000|+:11:9171000",
+                            "gene": "IPO7_DENND5A",
+                            "effect": "IPO7_DENND5A (Breakpoint)",
+                            "type": "StructuralVariant"
+                        }
+                    }
+                ]
+            },
+            {
+                "dataId": "cnvTrack",
+                "dataContent": [
+                    {
+                        "start": 1,
+                        "end": 1.7506166437410533,
+                        "value": -0.0808,
+                        "color": "red"
+                    },
+                    {
+                        "start": 1.7590907956684456,
+                        "end": 1.7797837585506056,
+                        "value": 0.3905,
+                        "color": "green"
+                    },
+                    {
+                        "start": 1.7802189177036336,
+                        "end": 4.909288065336648,
+                        "value": -0.0684,
+                        "color": "red"
+                    },
+                    {
+                        "start": 4.9099350782878615,
+                        "end": 5.078198526051565,
+                        "value": 0.464,
+                        "color": "green"
+                    },
+                    {
+                        "start": 5.079899082215373,
+                        "end": 16.657067865842464,
+                        "value": -0.0256,
+                        "color": "red"
+                    },
+                    {
+                        "start": 16.657102220512442,
+                        "end": 16.65895164691281,
+                        "value": -0.7602,
+                        "color": "red"
+                    },
+                    {
+                        "start": 16.658991727361116,
+                        "end": 17.149839800420338,
+                        "value": -0.0543,
+                        "color": "red"
+                    },
+                    {
+                        "start": 17.149874155090313,
+                        "end": 19.758504407258183,
+                        "value": 0.4658,
+                        "color": "green"
+                    },
+                    {
+                        "start": 19.758865131292932,
+                        "end": 19.77311086777628,
+                        "value": 0.9026,
+                        "color": "green"
+                    },
+                    {
+                        "start": 19.79831574398194,
+                        "end": 21.280885801014243,
+                        "value": 0.4945,
+                        "color": "green"
+                    },
+                    {
+                        "start": 21.28100031658083,
+                        "end": 21.300788606486957,
+                        "value": 1.4518,
+                        "color": "green"
+                    },
+                    {
+                        "start": 21.300880218940225,
+                        "end": 21.466068923741087,
+                        "value": 0.944,
+                        "color": "green"
+                    },
+                    {
+                        "start": 21.484328430833283,
+                        "end": 22.51891359137965,
+                        "value": 0.5429,
+                        "color": "green"
+                    },
+                    {
+                        "start": 22.51907391317287,
+                        "end": 22.555529943795648,
+                        "value": 1.249,
+                        "color": "green"
+                    },
+                    {
+                        "start": 22.555570024243952,
+                        "end": 25.502141439186573,
+                        "value": 0.4817,
+                        "color": "green"
+                    },
+                    {
+                        "start": 25.502204422748196,
+                        "end": 25.55446932733822,
+                        "value": 0.8966,
+                        "color": "green"
+                    },
+                    {
+                        "start": 25.554509407786526,
+                        "end": 26.083244956050855,
+                        "value": 0.4911,
+                        "color": "green"
+                    },
+                    {
+                        "start": 26.08781985293598,
+                        "end": 26.090585403869042,
+                        "value": 0.7572,
+                        "color": "green"
+                    },
+                    {
+                        "start": 26.090608306982357,
+                        "end": 28.538727815244425,
+                        "value": 0.4816,
+                        "color": "green"
+                    },
+                    {
+                        "start": 28.797151773408487,
+                        "end": 29.125032743658625,
+                        "value": 0.4493,
+                        "color": "green"
+                    },
+                    {
+                        "start": 29.137726794214725,
+                        "end": 29.440087970451085,
+                        "value": -0.0844,
+                        "color": "red"
+                    },
+                    {
+                        "start": 29.440122325121063,
+                        "end": 29.572565303656546,
+                        "value": 0.3235,
+                        "color": "green"
+                    },
+                    {
+                        "start": 29.572737077006426,
+                        "end": 29.91342661337925,
+                        "value": -0.0458,
+                        "color": "red"
+                    },
+                    {
+                        "start": 29.914274028571988,
+                        "end": 29.923378016115606,
+                        "value": 0.4958,
+                        "color": "green"
+                    },
+                    {
+                        "start": 29.924002125953503,
+                        "end": 32.31934713535423,
+                        "value": -0.0601,
+                        "color": "red"
+                    },
+                    {
+                        "start": 32.31945592514249,
+                        "end": 32.356644855391416,
+                        "value": 0.4422,
+                        "color": "green"
+                    },
+                    {
+                        "start": 32.358849280048204,
+                        "end": 32.96401824323061,
+                        "value": -0.0292,
+                        "color": "red"
+                    },
+                    {
+                        "start": 32.96606807187251,
+                        "end": 32.97387230773537,
+                        "value": -0.3106,
+                        "color": "red"
+                    },
+                    {
+                        "start": 32.97528084920439,
+                        "end": 33.74808342453427,
+                        "value": -0.0264,
+                        "color": "red"
+                    },
+                    {
+                        "start": 33.74813495653924,
+                        "end": 33.77128427832468,
+                        "value": 0.4215,
+                        "color": "green"
+                    },
+                    {
+                        "start": 33.77131863299465,
+                        "end": 37.912482083896464,
+                        "value": -0.041,
+                        "color": "red"
+                    },
+                    {
+                        "start": 37.91917551876344,
+                        "end": 37.930077400702466,
+                        "value": -0.3758,
+                        "color": "red"
+                    },
+                    {
+                        "start": 37.930117481150766,
+                        "end": 38.51709564658093,
+                        "value": -0.0314,
+                        "color": "red"
+                    },
+                    {
+                        "start": 38.517118549694246,
+                        "end": 38.611576714793024,
+                        "value": 0.4207,
+                        "color": "green"
+                    },
+                    {
+                        "start": 38.61164542413298,
+                        "end": 39.77113843893344,
+                        "value": -0.045,
+                        "color": "red"
+                    },
+                    {
+                        "start": 39.7712472287217,
+                        "end": 39.787943598329996,
+                        "value": 0.4321,
+                        "color": "green"
+                    },
+                    {
+                        "start": 39.787977952999974,
+                        "end": 41.31471666406464,
+                        "value": -0.0577,
+                        "color": "red"
+                    },
+                    {
+                        "start": 41.314876985857865,
+                        "end": 41.3169153629431,
+                        "value": -0.6938,
+                        "color": "red"
+                    },
+                    {
+                        "start": 41.31700697539637,
+                        "end": 41.39851342991423,
+                        "value": -0.1224,
+                        "color": "red"
+                    },
+                    {
+                        "start": 41.40328872904088,
+                        "end": 41.466089065756854,
+                        "value": 0.4105,
+                        "color": "green"
+                    },
+                    {
+                        "start": 41.46673035292974,
+                        "end": 42.766974450621525,
+                        "value": -0.0515,
+                        "color": "red"
+                    },
+                    {
+                        "start": 42.766997353734844,
+                        "end": 42.77432634999637,
+                        "value": 0.4642,
+                        "color": "green"
+                    },
+                    {
+                        "start": 42.77543715099226,
+                        "end": 43.36527247980875,
+                        "value": -0.0579,
+                        "color": "red"
+                    },
+                    {
+                        "start": 43.366944407080915,
+                        "end": 43.390803725379186,
+                        "value": 0.39,
+                        "color": "green"
+                    },
+                    {
+                        "start": 43.390843805827494,
+                        "end": 45.86504423437961,
+                        "value": -0.0639,
+                        "color": "red"
+                    },
+                    {
+                        "start": 45.865565280207576,
+                        "end": 45.93270575689717,
+                        "value": 0.5076,
+                        "color": "green"
+                    },
+                    {
+                        "start": 45.93283172402042,
+                        "end": 48.6168074932238,
+                        "value": -0.0403,
+                        "color": "red"
+                    },
+                    {
+                        "start": 48.61683039633712,
+                        "end": 48.723410034159066,
+                        "value": 0.501,
+                        "color": "green"
+                    },
+                    {
+                        "start": 48.723478743499015,
+                        "end": 50.22839651335065,
+                        "value": -0.0473,
+                        "color": "red"
+                    },
+                    {
+                        "start": 50.22853393203056,
+                        "end": 50.32510490933286,
+                        "value": 0.504,
+                        "color": "green"
+                    },
+                    {
+                        "start": 50.325196521786125,
+                        "end": 51.46625825614451,
+                        "value": -0.0261,
+                        "color": "red"
+                    },
+                    {
+                        "start": 51.47055831566983,
+                        "end": 51.49348433210042,
+                        "value": 0.489,
+                        "color": "green"
+                    },
+                    {
+                        "start": 51.493719089011925,
+                        "end": 53.28016192775953,
+                        "value": -0.0495,
+                        "color": "red"
+                    },
+                    {
+                        "start": 53.29270138230074,
+                        "end": 53.30189698229763,
+                        "value": 0.3462,
+                        "color": "green"
+                    },
+                    {
+                        "start": 53.303082218411795,
+                        "end": 53.881397281229695,
+                        "value": -0.0915,
+                        "color": "red"
+                    },
+                    {
+                        "start": 53.88145453901299,
+                        "end": 53.88169502170282,
+                        "value": -0.3503,
+                        "color": "red"
+                    },
+                    {
+                        "start": 53.881746553707785,
+                        "end": 56.60411366660925,
+                        "value": -0.1022,
+                        "color": "red"
+                    },
+                    {
+                        "start": 56.893342541216185,
+                        "end": 57.1882143993978,
+                        "value": 0.045,
+                        "color": "green"
+                    },
+                    {
+                        "start": 57.188426253195985,
+                        "end": 57.19124906191234,
+                        "value": 0.3977,
+                        "color": "green"
+                    },
+                    {
+                        "start": 57.198223059917446,
+                        "end": 58.651379793672035,
+                        "value": -0.0211,
+                        "color": "red"
+                    },
+                    {
+                        "start": 58.65149430923862,
+                        "end": 58.67381339316631,
+                        "value": 0.5923,
+                        "color": "green"
+                    },
+                    {
+                        "start": 58.699092704490255,
+                        "end": 60.64286275439257,
+                        "value": 0.0279,
+                        "color": "green"
+                    },
+                    {
+                        "start": 60.64332654243724,
+                        "end": 60.67615242959923,
+                        "value": 0.4723,
+                        "color": "green"
+                    },
+                    {
+                        "start": 60.676175332712546,
+                        "end": 61.92240243764554,
+                        "value": -0.0085,
+                        "color": "red"
+                    },
+                    {
+                        "start": 61.92247114698549,
+                        "end": 62.254886933672445,
+                        "value": -0.8624,
+                        "color": "red"
+                    },
+                    {
+                        "start": 62.25626112047148,
+                        "end": 62.26441462881243,
+                        "value": -0.611,
+                        "color": "red"
+                    },
+                    {
+                        "start": 62.26521623777854,
+                        "end": 62.33464130002153,
+                        "value": -0.8677,
+                        "color": "red"
+                    },
+                    {
+                        "start": 62.334795896036425,
+                        "end": 62.335162345849504,
+                        "value": -1.12,
+                        "color": "red"
+                    },
+                    {
+                        "start": 62.335190974741145,
+                        "end": 64.84314486654459,
+                        "value": -0.863,
+                        "color": "red"
+                    },
+                    {
+                        "start": 64.84589324014267,
+                        "end": 64.92637478033959,
+                        "value": 0.521,
+                        "color": "green"
+                    },
+                    {
+                        "start": 64.96681595267957,
+                        "end": 71.38105614253783,
+                        "value": -0.017,
+                        "color": "red"
+                    },
+                    {
+                        "start": 71.38108477142947,
+                        "end": 71.38510999359498,
+                        "value": 0.2341,
+                        "color": "green"
+                    },
+                    {
+                        "start": 71.38513862248662,
+                        "end": 72.1155017288396,
+                        "value": -0.0511,
+                        "color": "red"
+                    },
+                    {
+                        "start": 72.11650374004724,
+                        "end": 72.12044880131613,
+                        "value": 0.3997,
+                        "color": "green"
+                    },
+                    {
+                        "start": 72.12064920355766,
+                        "end": 77.76346100488507,
+                        "value": -0.0237,
+                        "color": "red"
+                    },
+                    {
+                        "start": 77.76355834311667,
+                        "end": 77.76544212418702,
+                        "value": 0.2337,
+                        "color": "green"
+                    },
+                    {
+                        "start": 77.76587728334005,
+                        "end": 79.10345345573899,
+                        "value": -0.0627,
+                        "color": "red"
+                    },
+                    {
+                        "start": 79.10449554739493,
+                        "end": 79.15764222184767,
+                        "value": 0.4598,
+                        "color": "green"
+                    },
+                    {
+                        "start": 79.15780826941922,
+                        "end": 79.50285512310066,
+                        "value": -0.0655,
+                        "color": "red"
+                    },
+                    {
+                        "start": 79.76380518014805,
+                        "end": 80.1497111879875,
+                        "value": -0.072,
+                        "color": "red"
+                    },
+                    {
+                        "start": 80.14975699421414,
+                        "end": 80.18853196506029,
+                        "value": 0.4339,
+                        "color": "green"
+                    },
+                    {
+                        "start": 80.18856631973027,
+                        "end": 80.74114400895787,
+                        "value": -0.0771,
+                        "color": "red"
+                    },
+                    {
+                        "start": 80.74188836014069,
+                        "end": 80.8300252659639,
+                        "value": 0.2112,
+                        "color": "green"
+                    },
+                    {
+                        "start": 80.87730874340743,
+                        "end": 86.11531374263029,
+                        "value": -0.0161,
+                        "color": "red"
+                    },
+                    {
+                        "start": 86.11620696404965,
+                        "end": 86.16387406864125,
+                        "value": 0.811,
+                        "color": "green"
+                    },
+                    {
+                        "start": 86.16393132642453,
+                        "end": 87.53926900690534,
+                        "value": 0.0042,
+                        "color": "green"
+                    },
+                    {
+                        "start": 87.5661114557132,
+                        "end": 87.66507008257882,
+                        "value": 0.5166,
+                        "color": "green"
+                    },
+                    {
+                        "start": 87.6674291032505,
+                        "end": 90.24483096041027,
+                        "value": -0.0225,
+                        "color": "red"
+                    },
+                    {
+                        "start": 90.24692086950047,
+                        "end": 90.26224877808805,
+                        "value": -0.7158,
+                        "color": "red"
+                    },
+                    {
+                        "start": 90.26479102366628,
+                        "end": 91.33548866813565,
+                        "value": -0.0426,
+                        "color": "red"
+                    },
+                    {
+                        "start": 91.33551157124897,
+                        "end": 91.36093402703115,
+                        "value": -0.7442,
+                        "color": "red"
+                    },
+                    {
+                        "start": 91.36097410747945,
+                        "end": 98.7525645777042,
+                        "value": -0.0359,
+                        "color": "red"
+                    },
+                    {
+                        "start": 98.75271344794076,
+                        "end": 98.77684187782052,
+                        "value": -0.8015,
+                        "color": "red"
+                    },
+                    {
+                        "start": 98.77837066063444,
+                        "end": 99.9897105982069,
+                        "value": -0.032,
+                        "color": "red"
+                    },
+                    {
+                        "start": 99.99277961539141,
+                        "end": 100.05379350926863,
+                        "value": -0.8655,
+                        "color": "red"
+                    },
+                    {
+                        "start": 100.05382786393861,
+                        "end": 100.0540397177368,
+                        "value": -0.5877,
+                        "color": "red"
+                    },
+                    {
+                        "start": 100.0542744746483,
+                        "end": 100.2423605669881,
+                        "value": -0.0326,
+                        "color": "red"
+                    },
+                    {
+                        "start": 100.2433969328657,
+                        "end": 100.51901872430415,
+                        "value": -0.5699,
+                        "color": "red"
+                    },
+                    {
+                        "start": 100.55323024982184,
+                        "end": 101.62343547735489,
+                        "value": -0.877,
+                        "color": "red"
+                    },
+                    {
+                        "start": 101.89271608380918,
+                        "end": 103.17545647714824,
+                        "value": -0.0143,
+                        "color": "red"
+                    },
+                    {
+                        "start": 103.17547938026155,
+                        "end": 103.18299160142962,
+                        "value": 0.4183,
+                        "color": "green"
+                    },
+                    {
+                        "start": 103.2004666768907,
+                        "end": 105.47450534660648,
+                        "value": -0.0068,
+                        "color": "red"
+                    },
+                    {
+                        "start": 105.47453397549812,
+                        "end": 105.51761473164792,
+                        "value": 0.5206,
+                        "color": "green"
+                    },
+                    {
+                        "start": 105.51765481209623,
+                        "end": 106.94970060115061,
+                        "value": -0.0009,
+                        "color": "red"
+                    },
+                    {
+                        "start": 106.94972923004227,
+                        "end": 107.00742789826681,
+                        "value": 0.4178,
+                        "color": "green"
+                    },
+                    {
+                        "start": 107.00747370449345,
+                        "end": 109.92266212841307,
+                        "value": 0.0043,
+                        "color": "green"
+                    },
+                    {
+                        "start": 109.9273343635298,
+                        "end": 109.97794451818265,
+                        "value": -0.2698,
+                        "color": "red"
+                    },
+                    {
+                        "start": 109.97828233910408,
+                        "end": 109.98807342004721,
+                        "value": 0.5255,
+                        "color": "green"
+                    },
+                    {
+                        "start": 109.98814212938717,
+                        "end": 111.96715434490643,
+                        "value": 0.0023,
+                        "color": "green"
+                    },
+                    {
+                        "start": 111.96719442535473,
+                        "end": 112.12524308457894,
+                        "value": 0.2986,
+                        "color": "green"
+                    },
+                    {
+                        "start": 112.1469895906737,
+                        "end": 118.0080795134714,
+                        "value": -0.0095,
+                        "color": "red"
+                    },
+                    {
+                        "start": 118.00839443127953,
+                        "end": 118.0102839381282,
+                        "value": -0.3078,
+                        "color": "red"
+                    },
+                    {
+                        "start": 118.01094240263606,
+                        "end": 118.84815998417079,
+                        "value": -0.0371,
+                        "color": "red"
+                    },
+                    {
+                        "start": 118.84819433884077,
+                        "end": 118.86836053011663,
+                        "value": -0.2851,
+                        "color": "red"
+                    },
+                    {
+                        "start": 118.86865254481143,
+                        "end": 118.92574428053307,
+                        "value": -0.0496,
+                        "color": "red"
+                    },
+                    {
+                        "start": 118.92593323121794,
+                        "end": 118.92743338514022,
+                        "value": 0.2338,
+                        "color": "green"
+                    },
+                    {
+                        "start": 118.92747919136686,
+                        "end": 119.13569712031256,
+                        "value": -0.0686,
+                        "color": "red"
+                    },
+                    {
+                        "start": 119.13573147498252,
+                        "end": 119.17291467945313,
+                        "value": 0.3881,
+                        "color": "green"
+                    },
+                    {
+                        "start": 119.17296621145809,
+                        "end": 122.5676713931232,
+                        "value": -0.0415,
+                        "color": "red"
+                    },
+                    {
+                        "start": 122.85760304976229,
+                        "end": 122.86482325623555,
+                        "value": 0.5685,
+                        "color": "green"
+                    },
+                    {
+                        "start": 122.8676231618386,
+                        "end": 123.74731456702021,
+                        "value": 0.8818,
+                        "color": "green"
+                    },
+                    {
+                        "start": 123.74733747013353,
+                        "end": 123.8688213089467,
+                        "value": 1.1628,
+                        "color": "green"
+                    },
+                    {
+                        "start": 123.88591848303805,
+                        "end": 124.68330182473571,
+                        "value": 0.8793,
+                        "color": "green"
+                    },
+                    {
+                        "start": 124.68366827454878,
+                        "end": 124.74128105609839,
+                        "value": 1.16,
+                        "color": "green"
+                    },
+                    {
+                        "start": 124.74195669794125,
+                        "end": 124.83881968993835,
+                        "value": 0.8415,
+                        "color": "green"
+                    },
+                    {
+                        "start": 124.83895710861825,
+                        "end": 124.87237275094816,
+                        "value": 1.186,
+                        "color": "green"
+                    },
+                    {
+                        "start": 124.87241283139646,
+                        "end": 126.251953233171,
+                        "value": 0.8792,
+                        "color": "green"
+                    },
+                    {
+                        "start": 126.25548031262186,
+                        "end": 126.27215950489516,
+                        "value": 1.3385,
+                        "color": "green"
+                    },
+                    {
+                        "start": 126.27218813378681,
+                        "end": 126.27245151958995,
+                        "value": 0.8985,
+                        "color": "green"
+                    },
+                    {
+                        "start": 126.27251450315158,
+                        "end": 126.27581255146926,
+                        "value": 1.4043,
+                        "color": "green"
+                    },
+                    {
+                        "start": 126.27584118036091,
+                        "end": 127.01289772158086,
+                        "value": 0.8323,
+                        "color": "green"
+                    },
+                    {
+                        "start": 127.01628165657348,
+                        "end": 129.53495993118776,
+                        "value": 1.0879,
+                        "color": "green"
+                    },
+                    {
+                        "start": 129.92075142346062,
+                        "end": 130.10688502539014,
+                        "value": 0.5799,
+                        "color": "green"
+                    },
+                    {
+                        "start": 130.12385623235824,
+                        "end": 130.38144182205932,
+                        "value": 0.0236,
+                        "color": "green"
+                    },
+                    {
+                        "start": 130.38147045095096,
+                        "end": 130.388060821808,
+                        "value": 0.5183,
+                        "color": "green"
+                    },
+                    {
+                        "start": 130.39157072392388,
+                        "end": 130.7642444580443,
+                        "value": 0.0041,
+                        "color": "green"
+                    },
+                    {
+                        "start": 130.7642673611576,
+                        "end": 130.88307726149097,
+                        "value": -0.8224,
+                        "color": "red"
+                    },
+                    {
+                        "start": 130.8831001646043,
+                        "end": 130.97192416382703,
+                        "value": 0.0187,
+                        "color": "green"
+                    },
+                    {
+                        "start": 130.97458092497183,
+                        "end": 131.01077356979147,
+                        "value": 0.5288,
+                        "color": "green"
+                    },
+                    {
+                        "start": 131.01080792446143,
+                        "end": 131.07830339940745,
+                        "value": -0.0305,
+                        "color": "red"
+                    },
+                    {
+                        "start": 131.08082274187234,
+                        "end": 131.14462508979597,
+                        "value": -0.7486,
+                        "color": "red"
+                    },
+                    {
+                        "start": 131.1455698432203,
+                        "end": 131.33678793630625,
+                        "value": -0.0044,
+                        "color": "red"
+                    },
+                    {
+                        "start": 131.33712575722768,
+                        "end": 136.20976311547835,
+                        "value": -0.8443,
+                        "color": "red"
+                    },
+                    {
+                        "start": 136.2103013386413,
+                        "end": 136.211234640509,
+                        "value": -0.5363,
+                        "color": "red"
+                    },
+                    {
+                        "start": 136.21393148210208,
+                        "end": 138.7512700682916,
+                        "value": -0.8259,
+                        "color": "red"
+                    },
+                    {
+                        "start": 138.75129297140492,
+                        "end": 138.75199724213942,
+                        "value": -1.1058,
+                        "color": "red"
+                    },
+                    {
+                        "start": 138.752581271529,
+                        "end": 138.76918602868403,
+                        "value": -0.8479,
+                        "color": "red"
+                    },
+                    {
+                        "start": 138.76964981672873,
+                        "end": 138.77049723192147,
+                        "value": -1.1335,
+                        "color": "red"
+                    },
+                    {
+                        "start": 138.77071481149798,
+                        "end": 141.1639126540252,
+                        "value": -0.8476,
+                        "color": "red"
+                    },
+                    {
+                        "start": 141.1641073304884,
+                        "end": 141.1652009541493,
+                        "value": -0.5893,
+                        "color": "red"
+                    },
+                    {
+                        "start": 141.1652410345976,
+                        "end": 142.01413920392415,
+                        "value": -0.8568,
+                        "color": "red"
+                    },
+                    {
+                        "start": 142.01445412173226,
+                        "end": 142.0149121839986,
+                        "value": -0.632,
+                        "color": "red"
+                    },
+                    {
+                        "start": 142.01503815112184,
+                        "end": 142.03726562259627,
+                        "value": -0.9082,
+                        "color": "red"
+                    },
+                    {
+                        "start": 142.03735150927122,
+                        "end": 142.0682478091362,
+                        "value": -1.469,
+                        "color": "red"
+                    },
+                    {
+                        "start": 142.0693586101321,
+                        "end": 142.39268758661044,
+                        "value": -0.8827,
+                        "color": "red"
+                    },
+                    {
+                        "start": 142.67326412306838,
+                        "end": 147.03257972831724,
+                        "value": 0.3602,
+                        "color": "green"
+                    },
+                    {
+                        "start": 147.03261980876556,
+                        "end": 147.04326975645807,
+                        "value": 0.6886,
+                        "color": "green"
+                    },
+                    {
+                        "start": 147.0432926595714,
+                        "end": 147.64260987730125,
+                        "value": 0.333,
+                        "color": "green"
+                    },
+                    {
+                        "start": 147.6435546307256,
+                        "end": 147.64549566957922,
+                        "value": 0.6037,
+                        "color": "green"
+                    },
+                    {
+                        "start": 147.6462113918704,
+                        "end": 151.03876368088368,
+                        "value": 0.3512,
+                        "color": "green"
+                    },
+                    {
+                        "start": 151.03879230977535,
+                        "end": 151.05824277876002,
+                        "value": 0.6635,
+                        "color": "green"
+                    },
+                    {
+                        "start": 151.05832293965665,
+                        "end": 151.4908253315401,
+                        "value": 0.3462,
+                        "color": "green"
+                    },
+                    {
+                        "start": 151.49115170090488,
+                        "end": 151.5459015932898,
+                        "value": -0.1962,
+                        "color": "red"
+                    },
+                    {
+                        "start": 151.54594739951645,
+                        "end": 151.57647152379005,
+                        "value": 0.3406,
+                        "color": "green"
+                    },
+                    {
+                        "start": 151.57651160423836,
+                        "end": 151.59431877484255,
+                        "value": 0.8361,
+                        "color": "green"
+                    },
+                    {
+                        "start": 151.5965747315043,
+                        "end": 154.35590746929984,
+                        "value": 0.3554,
+                        "color": "green"
+                    },
+                    {
+                        "start": 154.35713851164064,
+                        "end": 154.36419839632072,
+                        "value": 0.0785,
+                        "color": "green"
+                    },
+                    {
+                        "start": 154.36422702521236,
+                        "end": 155.88407189916853,
+                        "value": 0.3883,
+                        "color": "green"
+                    },
+                    {
+                        "start": 155.8844956067649,
+                        "end": 155.8878795417575,
+                        "value": 0.632,
+                        "color": "green"
+                    },
+                    {
+                        "start": 155.8879138964275,
+                        "end": 158.33896500319418,
+                        "value": 0.3647,
+                        "color": "green"
+                    },
+                    {
+                        "start": 158.3390108094208,
+                        "end": 158.98379643286378,
+                        "value": 0.7757,
+                        "color": "green"
+                    },
+                    {
+                        "start": 158.9838193359771,
+                        "end": 158.9912399446919,
+                        "value": 0.4077,
+                        "color": "green"
+                    },
+                    {
+                        "start": 158.99126857358354,
+                        "end": 160.86522993409477,
+                        "value": 0.7405,
+                        "color": "green"
+                    },
+                    {
+                        "start": 161.1222100799953,
+                        "end": 161.12248491735514,
+                        "value": -0.8856,
+                        "color": "red"
+                    },
+                    {
+                        "start": 161.12866303217248,
+                        "end": 161.1306785061444,
+                        "value": -1.1445,
+                        "color": "red"
+                    },
+                    {
+                        "start": 161.1321042249484,
+                        "end": 161.9363298717496,
+                        "value": -0.8876,
+                        "color": "red"
+                    },
+                    {
+                        "start": 161.93671922467598,
+                        "end": 162.03629623560116,
+                        "value": -0.4583,
+                        "color": "red"
+                    },
+                    {
+                        "start": 162.03633059027115,
+                        "end": 163.0341791570566,
+                        "value": -0.8972,
+                        "color": "red"
+                    },
+                    {
+                        "start": 163.03610874435358,
+                        "end": 163.0384219587986,
+                        "value": -1.0962,
+                        "color": "red"
+                    },
+                    {
+                        "start": 163.03934953488798,
+                        "end": 165.80903447990292,
+                        "value": -0.8869,
+                        "color": "red"
+                    },
+                    {
+                        "start": 165.80920052747447,
+                        "end": 165.83674724701683,
+                        "value": -0.09,
+                        "color": "red"
+                    },
+                    {
+                        "start": 165.83686176258342,
+                        "end": 166.54361175910628,
+                        "value": -0.8867,
+                        "color": "red"
+                    },
+                    {
+                        "start": 166.5684559112772,
+                        "end": 167.13845714396092,
+                        "value": 1.1777,
+                        "color": "green"
+                    },
+                    {
+                        "start": 167.13848004707424,
+                        "end": 167.13955649340016,
+                        "value": 0.9022,
+                        "color": "green"
+                    },
+                    {
+                        "start": 167.1400145556665,
+                        "end": 177.24658015896958,
+                        "value": 1.2081,
+                        "color": "green"
+                    },
+                    {
+                        "start": 177.25058247802176,
+                        "end": 177.2793945945749,
+                        "value": 0.4811,
+                        "color": "green"
+                    },
+                    {
+                        "start": 177.2794346750232,
+                        "end": 177.40329471184305,
+                        "value": 1.1405,
+                        "color": "green"
+                    },
+                    {
+                        "start": 177.403329066513,
+                        "end": 177.41073822367116,
+                        "value": 1.4106,
+                        "color": "green"
+                    },
+                    {
+                        "start": 177.410995883696,
+                        "end": 177.8513425918906,
+                        "value": 1.1196,
+                        "color": "green"
+                    },
+                    {
+                        "start": 178.1211266087756,
+                        "end": 180.6014593459184,
+                        "value": -0.8013,
+                        "color": "red"
+                    },
+                    {
+                        "start": 180.60555900320222,
+                        "end": 180.608702455505,
+                        "value": -3.2079,
+                        "color": "red"
+                    },
+                    {
+                        "start": 180.60974454716094,
+                        "end": 190.20088131103702,
+                        "value": -0.8575,
+                        "color": "red"
+                    },
+                    {
+                        "start": 190.20159130754985,
+                        "end": 190.2017573551214,
+                        "value": 0.187,
+                        "color": "green"
+                    },
+                    {
+                        "start": 190.2017917097914,
+                        "end": 194.09858466737617,
+                        "value": 0.4858,
+                        "color": "green"
+                    },
+                    {
+                        "start": 194.09865337671613,
+                        "end": 194.15007086611342,
+                        "value": 1.3704,
+                        "color": "green"
+                    },
+                    {
+                        "start": 194.1501052207834,
+                        "end": 194.24491265836025,
+                        "value": 0.4642,
+                        "color": "green"
+                    },
+                    {
+                        "start": 194.51807591509964,
+                        "end": 195.84118304566042,
+                        "value": -0.0652,
+                        "color": "red"
+                    },
+                    {
+                        "start": 195.84202473507483,
+                        "end": 195.8538541931032,
+                        "value": -0.3037,
+                        "color": "red"
+                    },
+                    {
+                        "start": 195.85389999932983,
+                        "end": 196.14205551953117,
+                        "value": -0.0555,
+                        "color": "red"
+                    },
+                    {
+                        "start": 196.14791871654037,
+                        "end": 196.30678616206566,
+                        "value": 0.477,
+                        "color": "green"
+                    },
+                    {
+                        "start": 196.30820042931302,
+                        "end": 196.79262417908674,
+                        "value": -0.015,
+                        "color": "red"
+                    },
+                    {
+                        "start": 196.79780028269644,
+                        "end": 198.786849787627,
+                        "value": -0.8724,
+                        "color": "red"
+                    },
+                    {
+                        "start": 198.78834421577096,
+                        "end": 199.4036764354879,
+                        "value": -0.0074,
+                        "color": "red"
+                    },
+                    {
+                        "start": 199.40370506437955,
+                        "end": 200.37211167899565,
+                        "value": 0.8701,
+                        "color": "green"
+                    },
+                    {
+                        "start": 200.3729648199667,
+                        "end": 200.39228359604985,
+                        "value": 0.2017,
+                        "color": "green"
+                    },
+                    {
+                        "start": 200.3923294022765,
+                        "end": 200.54056407744423,
+                        "value": 0.9226,
+                        "color": "green"
+                    },
+                    {
+                        "start": 200.5495020174163,
+                        "end": 200.61190154964922,
+                        "value": 1.6332,
+                        "color": "green"
+                    },
+                    {
+                        "start": 200.61192445276254,
+                        "end": 202.1344833456468,
+                        "value": 0.8769,
+                        "color": "green"
+                    },
+                    {
+                        "start": 202.15083616855534,
+                        "end": 202.24059919542407,
+                        "value": 1.1227,
+                        "color": "green"
+                    },
+                    {
+                        "start": 202.2406220985374,
+                        "end": 202.8998882153752,
+                        "value": 0.8774,
+                        "color": "green"
+                    },
+                    {
+                        "start": 202.90005998872508,
+                        "end": 202.9914205077477,
+                        "value": 1.1282,
+                        "color": "green"
+                    },
+                    {
+                        "start": 202.99148921708766,
+                        "end": 203.1365231821693,
+                        "value": -0.0377,
+                        "color": "red"
+                    },
+                    {
+                        "start": 203.13682092264244,
+                        "end": 203.21146216894343,
+                        "value": 0.4466,
+                        "color": "green"
+                    },
+                    {
+                        "start": 203.22596556545162,
+                        "end": 205.96282462330458,
+                        "value": -0.0304,
+                        "color": "red"
+                    },
+                    {
+                        "start": 205.96299067087614,
+                        "end": 205.99365221382965,
+                        "value": 0.4036,
+                        "color": "green"
+                    },
+                    {
+                        "start": 205.9968471981374,
+                        "end": 206.345965080211,
+                        "value": -0.061,
+                        "color": "red"
+                    },
+                    {
+                        "start": 206.3460280637726,
+                        "end": 206.36942931980454,
+                        "value": 0.441,
+                        "color": "green"
+                    },
+                    {
+                        "start": 206.37116995641665,
+                        "end": 207.78545438109347,
+                        "value": -0.044,
+                        "color": "red"
+                    },
+                    {
+                        "start": 207.7855001873201,
+                        "end": 207.80917628071185,
+                        "value": 0.4577,
+                        "color": "green"
+                    },
+                    {
+                        "start": 207.8118788480833,
+                        "end": 208.0022266228632,
+                        "value": 0.0326,
+                        "color": "green"
+                    },
+                    {
+                        "start": 208.00470015910145,
+                        "end": 208.03823031699795,
+                        "value": 0.5106,
+                        "color": "green"
+                    },
+                    {
+                        "start": 208.03827612322456,
+                        "end": 208.65094585601838,
+                        "value": -0.0433,
+                        "color": "red"
+                    },
+                    {
+                        "start": 208.65097448491005,
+                        "end": 208.6846764161564,
+                        "value": 0.5143,
+                        "color": "green"
+                    },
+                    {
+                        "start": 208.68485964106296,
+                        "end": 209.10747361377167,
+                        "value": 0.0034,
+                        "color": "green"
+                    },
+                    {
+                        "start": 209.1101532780298,
+                        "end": 209.25964762443,
+                        "value": 1.036,
+                        "color": "green"
+                    },
+                    {
+                        "start": 209.25967625332163,
+                        "end": 210.00393009790153,
+                        "value": -0.08,
+                        "color": "red"
+                    },
+                    {
+                        "start": 210.26268912861343,
+                        "end": 210.67735572100108,
+                        "value": -0.928,
+                        "color": "red"
+                    },
+                    {
+                        "start": 210.67739580144936,
+                        "end": 211.2904033551646,
+                        "value": -0.0326,
+                        "color": "red"
+                    },
+                    {
+                        "start": 211.29056940273617,
+                        "end": 211.32228448890226,
+                        "value": -0.8327,
+                        "color": "red"
+                    },
+                    {
+                        "start": 211.32237610135553,
+                        "end": 214.28661154244412,
+                        "value": -0.0024,
+                        "color": "red"
+                    },
+                    {
+                        "start": 214.2868806540256,
+                        "end": 214.29167885626555,
+                        "value": -0.3458,
+                        "color": "red"
+                    },
+                    {
+                        "start": 214.29442722986363,
+                        "end": 218.90003718994816,
+                        "value": -0.0502,
+                        "color": "red"
+                    },
+                    {
+                        "start": 218.9057057104942,
+                        "end": 218.91202696976976,
+                        "value": 0.269,
+                        "color": "green"
+                    },
+                    {
+                        "start": 218.91205559866142,
+                        "end": 220.7563975078751,
+                        "value": 0.0025,
+                        "color": "green"
+                    },
+                    {
+                        "start": 220.77737103389538,
+                        "end": 220.80502081744768,
+                        "value": 0.5268,
+                        "color": "green"
+                    },
+                    {
+                        "start": 220.8089716044949,
+                        "end": 225.68322935801277,
+                        "value": -0.0183,
+                        "color": "red"
+                    },
+                    {
+                        "start": 225.95777080959604,
+                        "end": 231.76322907014608,
+                        "value": -0.0106,
+                        "color": "red"
+                    },
+                    {
+                        "start": 231.7712337082505,
+                        "end": 231.78117365943018,
+                        "value": 0.4832,
+                        "color": "green"
+                    },
+                    {
+                        "start": 231.7812137398785,
+                        "end": 234.85200018989735,
+                        "value": -0.0203,
+                        "color": "red"
+                    },
+                    {
+                        "start": 234.85770306511336,
+                        "end": 234.92015985512958,
+                        "value": -0.7852,
+                        "color": "red"
+                    },
+                    {
+                        "start": 234.92023429024786,
+                        "end": 234.92144242947535,
+                        "value": -3.2526,
+                        "color": "red"
+                    },
+                    {
+                        "start": 234.92148250992364,
+                        "end": 234.92240436023465,
+                        "value": -1.2986,
+                        "color": "red"
+                    },
+                    {
+                        "start": 234.9224501664613,
+                        "end": 236.77318777006883,
+                        "value": -0.775,
+                        "color": "red"
+                    },
+                    {
+                        "start": 236.77341107542367,
+                        "end": 236.7769324290962,
+                        "value": -3.2308,
+                        "color": "red"
+                    },
+                    {
+                        "start": 236.77697250954452,
+                        "end": 237.59551832794733,
+                        "value": -0.7907,
+                        "color": "red"
+                    },
+                    {
+                        "start": 237.59585614886876,
+                        "end": 237.70291675207037,
+                        "value": 0.0585,
+                        "color": "green"
+                    },
+                    {
+                        "start": 237.702962558297,
+                        "end": 238.72098876791497,
+                        "value": -0.8135,
+                        "color": "red"
+                    },
+                    {
+                        "start": 238.72414939755276,
+                        "end": 240.27483903936897,
+                        "value": 0.0282,
+                        "color": "green"
+                    },
+                    {
+                        "start": 240.27487911981729,
+                        "end": 240.30807718257068,
+                        "value": 0.5227,
+                        "color": "green"
+                    },
+                    {
+                        "start": 240.30811726301897,
+                        "end": 240.60106525968195,
+                        "value": 0.0413,
+                        "color": "green"
+                    },
+                    {
+                        "start": 240.6373266138415,
+                        "end": 240.67351353288282,
+                        "value": 0.392,
+                        "color": "green"
+                    },
+                    {
+                        "start": 240.67654246961902,
+                        "end": 241.00202433874918,
+                        "value": 0.0382,
+                        "color": "green"
+                    },
+                    {
+                        "start": 241.0021445800941,
+                        "end": 241.25376390877602,
+                        "value": -0.8585,
+                        "color": "red"
+                    },
+                    {
+                        "start": 243.74805552090788,
+                        "end": 245.22378327283667,
+                        "value": -0.0117,
+                        "color": "red"
+                    },
+                    {
+                        "start": 245.22381762750663,
+                        "end": 245.24077165713976,
+                        "value": 0.5219,
+                        "color": "green"
+                    },
+                    {
+                        "start": 245.24081173758805,
+                        "end": 246.237452165146,
+                        "value": -0.0024,
+                        "color": "red"
+                    },
+                    {
+                        "start": 246.23761248693924,
+                        "end": 246.26241655866184,
+                        "value": 0.5092,
+                        "color": "green"
+                    },
+                    {
+                        "start": 246.26243946177516,
+                        "end": 246.78725285188392,
+                        "value": 0.0047,
+                        "color": "green"
+                    },
+                    {
+                        "start": 246.78730438388888,
+                        "end": 246.79530329621494,
+                        "value": -0.2563,
+                        "color": "red"
+                    },
+                    {
+                        "start": 246.79600756694944,
+                        "end": 247.09867220943727,
+                        "value": 0.027,
+                        "color": "green"
+                    },
+                    {
+                        "start": 247.0987008383289,
+                        "end": 247.1300093942336,
+                        "value": 0.5604,
+                        "color": "green"
+                    },
+                    {
+                        "start": 247.13003229734693,
+                        "end": 254.20665342745417,
+                        "value": -0.0109,
+                        "color": "red"
+                    },
+                    {
+                        "start": 254.20706568349388,
+                        "end": 254.6289582081331,
+                        "value": -0.9014,
+                        "color": "red"
+                    },
+                    {
+                        "start": 254.62910707836966,
+                        "end": 254.64969125146357,
+                        "value": -0.0448,
+                        "color": "red"
+                    },
+                    {
+                        "start": 254.65591517250755,
+                        "end": 254.66637616951522,
+                        "value": -0.843,
+                        "color": "red"
+                    },
+                    {
+                        "start": 257.21771176437744,
+                        "end": 257.2521981272549,
+                        "value": 0.0271,
+                        "color": "green"
+                    },
+                    {
+                        "start": 257.2522210303683,
+                        "end": 257.31204396235296,
+                        "value": 0.5151,
+                        "color": "green"
+                    },
+                    {
+                        "start": 257.3120668654663,
+                        "end": 257.47822895258315,
+                        "value": -0.0137,
+                        "color": "red"
+                    },
+                    {
+                        "start": 257.4819335311622,
+                        "end": 257.53627116750744,
+                        "value": 0.2541,
+                        "color": "green"
+                    },
+                    {
+                        "start": 257.5364143119657,
+                        "end": 258.996642381957,
+                        "value": -0.0377,
+                        "color": "red"
+                    },
+                    {
+                        "start": 258.9966881881836,
+                        "end": 259.0273726342504,
+                        "value": 0.4888,
+                        "color": "green"
+                    },
+                    {
+                        "start": 259.02739553736376,
+                        "end": 260.300299043533,
+                        "value": 0.0117,
+                        "color": "green"
+                    },
+                    {
+                        "start": 260.30037920442965,
+                        "end": 260.40736537251297,
+                        "value": 0.5643,
+                        "color": "green"
+                    },
+                    {
+                        "start": 260.4175286290475,
+                        "end": 260.82598275194783,
+                        "value": -0.0008,
+                        "color": "red"
+                    },
+                    {
+                        "start": 260.82604573550947,
+                        "end": 260.89443443187486,
+                        "value": 0.5129,
+                        "color": "green"
+                    },
+                    {
+                        "start": 260.89446878654485,
+                        "end": 262.01780351119567,
+                        "value": 0.0017,
+                        "color": "green"
+                    },
+                    {
+                        "start": 262.01806117122044,
+                        "end": 262.05728847855465,
+                        "value": 0.5521,
+                        "color": "green"
+                    },
+                    {
+                        "start": 262.05732855900294,
+                        "end": 262.8490090254846,
+                        "value": -0.026,
+                        "color": "red"
+                    },
+                    {
+                        "start": 262.84927813706605,
+                        "end": 262.8679613517546,
+                        "value": 0.4277,
+                        "color": "green"
+                    },
+                    {
+                        "start": 262.86800143220296,
+                        "end": 264.27887901877386,
+                        "value": -0.0316,
+                        "color": "red"
+                    },
+                    {
+                        "start": 264.279108049907,
+                        "end": 264.2881547796673,
+                        "value": 0.2778,
+                        "color": "green"
+                    },
+                    {
+                        "start": 264.28840671391384,
+                        "end": 267.18992770496135,
+                        "value": -0.0279,
+                        "color": "red"
+                    },
+                    {
+                        "start": 269.7488627818534,
+                        "end": 273.4578616617932,
+                        "value": -0.0234,
+                        "color": "red"
+                    },
+                    {
+                        "start": 273.4579590000248,
+                        "end": 273.48412580698977,
+                        "value": 0.5427,
+                        "color": "green"
+                    },
+                    {
+                        "start": 273.4845266114728,
+                        "end": 277.1204473825955,
+                        "value": -0.0264,
+                        "color": "red"
+                    },
+                    {
+                        "start": 277.12047028570885,
+                        "end": 277.1341720732509,
+                        "value": -0.8141,
+                        "color": "red"
+                    },
+                    {
+                        "start": 277.1342350568125,
+                        "end": 277.3628768370589,
+                        "value": -0.0551,
+                        "color": "red"
+                    },
+                    {
+                        "start": 277.36548206619875,
+                        "end": 277.45147180514846,
+                        "value": 0.4962,
+                        "color": "green"
+                    },
+                    {
+                        "start": 277.45491299792434,
+                        "end": 278.0349916004677,
+                        "value": -0.0561,
+                        "color": "red"
+                    },
+                    {
+                        "start": 278.0350889386993,
+                        "end": 278.17324624400743,
+                        "value": 0.468,
+                        "color": "green"
+                    },
+                    {
+                        "start": 278.17964766417964,
+                        "end": 279.1601413968489,
+                        "value": -0.0345,
+                        "color": "red"
+                    },
+                    {
+                        "start": 279.4088911944633,
+                        "end": 279.79635461400835,
+                        "value": -0.0855,
+                        "color": "red"
+                    },
+                    {
+                        "start": 279.79637751712164,
+                        "end": 279.80086652733183,
+                        "value": 0.5332,
+                        "color": "green"
+                    },
+                    {
+                        "start": 279.80119862247494,
+                        "end": 280.1647912721651,
+                        "value": -0.0587,
+                        "color": "red"
+                    },
+                    {
+                        "start": 280.1648199010567,
+                        "end": 280.2103398387748,
+                        "value": -0.7579,
+                        "color": "red"
+                    },
+                    {
+                        "start": 280.24249580987225,
+                        "end": 280.4150478656046,
+                        "value": 0.0209,
+                        "color": "green"
+                    },
+                    {
+                        "start": 280.4150822202746,
+                        "end": 280.4341261589979,
+                        "value": 0.4748,
+                        "color": "green"
+                    },
+                    {
+                        "start": 280.4342005941162,
+                        "end": 280.4492135848957,
+                        "value": 0.2459,
+                        "color": "green"
+                    },
+                    {
+                        "start": 280.4501984187683,
+                        "end": 280.7890328029624,
+                        "value": 0.4951,
+                        "color": "green"
+                    },
+                    {
+                        "start": 280.78985158926355,
+                        "end": 281.6891766883364,
+                        "value": -0.0286,
+                        "color": "red"
+                    },
+                    {
+                        "start": 281.69001265197244,
+                        "end": 281.8091145670006,
+                        "value": -0.8666,
+                        "color": "red"
+                    },
+                    {
+                        "start": 281.80939513013874,
+                        "end": 281.8102998031148,
+                        "value": -1.145,
+                        "color": "red"
+                    },
+                    {
+                        "start": 281.81032843200643,
+                        "end": 282.5140552175714,
+                        "value": -0.8799,
+                        "color": "red"
+                    },
+                    {
+                        "start": 282.5143014260396,
+                        "end": 282.99585083509197,
+                        "value": -0.074,
+                        "color": "red"
+                    },
+                    {
+                        "start": 282.99599970532853,
+                        "end": 283.01720226248204,
+                        "value": 0.4451,
+                        "color": "green"
+                    },
+                    {
+                        "start": 283.0172308913737,
+                        "end": 283.178428728679,
+                        "value": 0.0523,
+                        "color": "green"
+                    },
+                    {
+                        "start": 283.1784745349056,
+                        "end": 283.23341337797547,
+                        "value": 0.3275,
+                        "color": "green"
+                    },
+                    {
+                        "start": 283.2368087645247,
+                        "end": 286.16512067237517,
+                        "value": -0.0242,
+                        "color": "red"
+                    },
+                    {
+                        "start": 286.1795210048734,
+                        "end": 287.43173727393884,
+                        "value": -0.8953,
+                        "color": "red"
+                    },
+                    {
+                        "start": 287.43177162860883,
+                        "end": 287.44583414018564,
+                        "value": -0.3698,
+                        "color": "red"
+                    },
+                    {
+                        "start": 287.4459658330872,
+                        "end": 287.73617118193044,
+                        "value": -0.878,
+                        "color": "red"
+                    },
+                    {
+                        "start": 287.73621126237873,
+                        "end": 287.74928321430457,
+                        "value": -3.1251,
+                        "color": "red"
+                    },
+                    {
+                        "start": 287.75213465191257,
+                        "end": 287.76730796448527,
+                        "value": -0.9503,
+                        "color": "red"
+                    },
+                    {
+                        "start": 287.77118431641424,
+                        "end": 288.0766030582784,
+                        "value": -0.043,
+                        "color": "red"
+                    },
+                    {
+                        "start": 288.0766316871701,
+                        "end": 289.03504681860153,
+                        "value": 0.4951,
+                        "color": "green"
+                    },
+                    {
+                        "start": 289.0350697217148,
+                        "end": 289.72188828387334,
+                        "value": -0.0699,
+                        "color": "red"
+                    },
+                    {
+                        "start": 289.97665140840473,
+                        "end": 293.096839873849,
+                        "value": -0.0528,
+                        "color": "red"
+                    },
+                    {
+                        "start": 293.0968627769623,
+                        "end": 293.13102277047506,
+                        "value": 0.8072,
+                        "color": "green"
+                    },
+                    {
+                        "start": 293.131125834485,
+                        "end": 293.9283545801677,
+                        "value": -0.0001,
+                        "color": "red"
+                    },
+                    {
+                        "start": 293.9284576441777,
+                        "end": 293.9400752484078,
+                        "value": 0.3878,
+                        "color": "green"
+                    },
+                    {
+                        "start": 293.94009815152117,
+                        "end": 294.13595412505384,
+                        "value": -0.0248,
+                        "color": "red"
+                    },
+                    {
+                        "start": 294.1359827539455,
+                        "end": 294.1439473116016,
+                        "value": 0.316,
+                        "color": "green"
+                    },
+                    {
+                        "start": 294.1475602777274,
+                        "end": 296.03505737820916,
+                        "value": -0.0543,
+                        "color": "red"
+                    },
+                    {
+                        "start": 296.03991856401075,
+                        "end": 296.12550177269907,
+                        "value": 0.5637,
+                        "color": "green"
+                    },
+                    {
+                        "start": 296.1337869739416,
+                        "end": 296.683856772261,
+                        "value": -0.0281,
+                        "color": "red"
+                    },
+                    {
+                        "start": 296.6840686260592,
+                        "end": 296.69523389380134,
+                        "value": 0.2379,
+                        "color": "green"
+                    },
+                    {
+                        "start": 296.695262522693,
+                        "end": 299.25841291759104,
+                        "value": -0.055,
+                        "color": "red"
+                    },
+                    {
+                        "start": 299.5183758504545,
+                        "end": 299.8418136167211,
+                        "value": 0.5539,
+                        "color": "green"
+                    },
+                    {
+                        "start": 299.8451231165954,
+                        "end": 299.8726526588028,
+                        "value": 0.9055,
+                        "color": "green"
+                    },
+                    {
+                        "start": 299.87274999703436,
+                        "end": 301.00203380536936,
+                        "value": 0.5209,
+                        "color": "green"
+                    },
+                    {
+                        "start": 301.00224565916756,
+                        "end": 301.209816575162,
+                        "value": 0.0243,
+                        "color": "green"
+                    },
+                    {
+                        "start": 301.21843387154763,
+                        "end": 303.08672098573453,
+                        "value": -0.8408,
+                        "color": "red"
+                    },
+                    {
+                        "start": 303.0867438888479,
+                        "end": 303.10326275932795,
+                        "value": -3.1516,
+                        "color": "red"
+                    },
+                    {
+                        "start": 303.11012796754477,
+                        "end": 304.78659578192116,
+                        "value": -0.8572,
+                        "color": "red"
+                    },
+                    {
+                        "start": 304.78663586236945,
+                        "end": 304.8121155759349,
+                        "value": -3.2552,
+                        "color": "red"
+                    },
+                    {
+                        "start": 304.8121671079399,
+                        "end": 308.4330405336131,
+                        "value": -0.8466,
+                        "color": "red"
+                    },
+                    {
+                        "start": 308.7032455097209,
+                        "end": 311.09574480729196,
+                        "value": -0.0719,
+                        "color": "red"
+                    },
+                    {
+                        "start": 311.09845882622005,
+                        "end": 311.0999990605906,
+                        "value": 0.2012,
+                        "color": "green"
+                    },
+                    {
+                        "start": 311.1000276894823,
+                        "end": 315.4372188872667,
+                        "value": -0.0562,
+                        "color": "red"
+                    },
+                    {
+                        "start": 315.6849713688117,
+                        "end": 320.2192152277996,
+                        "value": 0.002,
+                        "color": "green"
+                    },
+                    {
+                        "start": 320.2192553082479,
+                        "end": 320.2199252243124,
+                        "value": 0.2657,
+                        "color": "green"
+                    },
+                    {
+                        "start": 320.2201313523323,
+                        "end": 322.8803394156907,
+                        "value": -0.0072,
+                        "color": "red"
+                    },
+                    {
+                        "start": 324.25159118075567,
+                        "end": 328.6233889827625,
+                        "value": -0.0294,
+                        "color": "red"
+                    },
+                    {
+                        "start": 330.8106529093196,
+                        "end": 331.02129284249855,
+                        "value": -0.0435,
+                        "color": "red"
+                    },
+                    {
+                        "start": 331.0215275994101,
+                        "end": 331.05222349703354,
+                        "value": 1.122,
+                        "color": "green"
+                    },
+                    {
+                        "start": 331.05225785170353,
+                        "end": 331.50458861394145,
+                        "value": 0.8619,
+                        "color": "green"
+                    },
+                    {
+                        "start": 331.50464587172473,
+                        "end": 331.5870913538886,
+                        "value": 1.1412,
+                        "color": "green"
+                    },
+                    {
+                        "start": 331.5963270343338,
+                        "end": 332.14334499280363,
+                        "value": -0.0539,
+                        "color": "red"
+                    },
+                    {
+                        "start": 332.14348241148355,
+                        "end": 333.23554293489957,
+                        "value": -0.8947,
+                        "color": "red"
+                    },
+                    {
+                        "start": 333.2360811580626,
+                        "end": 333.33140964146736,
+                        "value": 0.8529,
+                        "color": "green"
+                    },
+                    {
+                        "start": 333.3316673014922,
+                        "end": 333.4278661032031,
+                        "value": 1.1342,
+                        "color": "green"
+                    },
+                    {
+                        "start": 333.42792336098637,
+                        "end": 333.4567469290962,
+                        "value": -0.0769,
+                        "color": "red"
+                    },
+                    {
+                        "start": 333.4567698322095,
+                        "end": 333.5949614921876,
+                        "value": 1.1608,
+                        "color": "green"
+                    },
+                    {
+                        "start": 333.5968853537063,
+                        "end": 333.77682938926176,
+                        "value": 0.8311,
+                        "color": "green"
+                    },
+                    {
+                        "start": 333.7771672101832,
+                        "end": 333.7791540552635,
+                        "value": 1.3212,
+                        "color": "green"
+                    },
+                    {
+                        "start": 333.7796235690865,
+                        "end": 333.82941493743823,
+                        "value": 0.8565,
+                        "color": "green"
+                    },
+                    {
+                        "start": 333.83170524877,
+                        "end": 333.8883618253386,
+                        "value": 1.5745,
+                        "color": "green"
+                    },
+                    {
+                        "start": 333.8884019057869,
+                        "end": 334.2595067766451,
+                        "value": 0.85,
+                        "color": "green"
+                    },
+                    {
+                        "start": 334.261069914129,
+                        "end": 334.43110262739646,
+                        "value": 1.183,
+                        "color": "green"
+                    },
+                    {
+                        "start": 334.4311369820664,
+                        "end": 334.72318603153167,
+                        "value": 0.8151,
+                        "color": "green"
+                    },
+                    {
+                        "start": 334.98751842035375,
+                        "end": 337.0990079690785,
+                        "value": -0.8665,
+                        "color": "red"
+                    },
+                    {
+                        "start": 337.09917401665,
+                        "end": 337.09976377181795,
+                        "value": -1.1393,
+                        "color": "red"
+                    },
+                    {
+                        "start": 337.1000271576211,
+                        "end": 337.26892044100106,
+                        "value": -0.8765,
+                        "color": "red"
+                    },
+                    {
+                        "start": 337.26917810102583,
+                        "end": 337.3305240900462,
+                        "value": -0.0158,
+                        "color": "red"
+                    },
+                    {
+                        "start": 337.34922448206976,
+                        "end": 346.59450133174164,
+                        "value": -0.8656,
+                        "color": "red"
+                    },
+                    {
+                        "start": 346.59519415091944,
+                        "end": 346.5992995339816,
+                        "value": -1.2867,
+                        "color": "red"
+                    },
+                    {
+                        "start": 346.5993396144299,
+                        "end": 346.77790373740805,
+                        "value": -0.8802,
+                        "color": "red"
+                    },
+                    {
+                        "start": 346.78172855733203,
+                        "end": 346.7875974801196,
+                        "value": 0.4135,
+                        "color": "green"
+                    },
+                    {
+                        "start": 346.7876375605679,
+                        "end": 346.79694767613137,
+                        "value": -0.0775,
+                        "color": "red"
+                    },
+                    {
+                        "start": 346.79697057924466,
+                        "end": 347.6643973672449,
+                        "value": -0.8588,
+                        "color": "red"
+                    },
+                    {
+                        "start": 347.66450615703314,
+                        "end": 347.744535360742,
+                        "value": -0.5089,
+                        "color": "red"
+                    },
+                    {
+                        "start": 347.744586892747,
+                        "end": 348.11142033297153,
+                        "value": -0.8584,
+                        "color": "red"
+                    },
+                    {
+                        "start": 348.1133670976035,
+                        "end": 348.1659240168883,
+                        "value": -0.5356,
+                        "color": "red"
+                    },
+                    {
+                        "start": 348.1659469200016,
+                        "end": 350.5051048666567,
+                        "value": -0.855,
+                        "color": "red"
+                    },
+                    {
+                        "start": 350.50532244623327,
+                        "end": 350.5487982810878,
+                        "value": 0.0233,
+                        "color": "green"
+                    },
+                    {
+                        "start": 350.5488326357577,
+                        "end": 352.50467262637824,
+                        "value": -0.8833,
+                        "color": "red"
+                    },
+                    {
+                        "start": 352.505084882418,
+                        "end": 352.5054169775611,
+                        "value": -1.1508,
+                        "color": "red"
+                    },
+                    {
+                        "start": 352.50554867046264,
+                        "end": 352.73891994360906,
+                        "value": -0.9098,
+                        "color": "red"
+                    },
+                    {
+                        "start": 353.39700769526667,
+                        "end": 359.74043145874793,
+                        "value": -1.3216,
+                        "color": "red"
+                    }
+                ]
+            }
+        ]
+    }
+}

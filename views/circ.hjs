@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+<!--<link rel='stylesheet' href='/stylesheets/chosen.min.css' />-->
+  <link rel="stylesheet" href="/stylesheets/circ.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="/javascripts/jstree/themes/default/style.min.css" />
+</head>
+
+<style>
+textarea {
+
+font-size: 12px;
+
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+}
+
+table.floatThead-table {
+    border-top: none;
+    border-bottom: none;
+    background-color: #FFF;
+}
+
+table {
+  width: 100%;
+  height: 50px;
+  vertical-align: center;
+  border-collapse : collapse;
+}
+
+td {
+  vertical-align: center;
+}
+
+text {
+  font: 10px helvetica;
+  font-weight:bold;
+}
+
+label {
+  font: normal 12px helvetica;
+  vertical-align:center;
+
+}
+
+tr {
+    border: solid thin;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: center;
+    font: 50px helvetica;
+}
+
+
+input[type="color"] {
+  width : 18px;
+  height : 18px;
+}
+
+ul{
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.accordionContainer {
+width:375px !important;
+
+}
+
+
+
+
+
+/*.remember {
+  width: 6%;
+}*/
+
+</style>
+
+<body>
+
+
+
+
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div id="nav" class="col-xs-5">
+      
+      <h3>Circular Plot</h3>
+      <br></br>
+      
+      
+      <div class id="circTabs">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active">
+            <a data-toggle="tab" href="#circ-load">Load</a>
+          </li>
+          <li>
+            <a data-toggle="tab" class="selectPage" href="#circ-data">Data</a>
+          </li>
+          <li>
+            <a data-toggle="tab" class="selectPage" href="#circ-layers">Layers</a>
+          </li>
+          <li>
+            <a data-toggle="tab" class="selectPage" href="#circ-thresholds">Thresholds</a>
+          </li>
+          <li>
+            <a data-toggle="tab" class="selectPage" href="#circ-save">Save</a>
+          </li>
+      
+        </ul>
+      </div>
+      
+      <div id="sidebarContent">
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="circ-load">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#db">Database</a></li>
+              <li><a data-toggle="tab" href="#file_upload">Upload</a></li>
+              <li><a data-toggle="tab" href="#copyPaste">Edit Template</a></li>
+              <li><a data-toggle="tab" href="#tree">Tree View</a></li>
+            </ul>
+            
+
+            <p>
+            </p>
+
+            <div class="tab-content">
+              
+              <div class="tab-pane fade" id="file_upload">
+                <input type="file" id="jsonFile" size="50" accept=".json" onchange="loadJson()">
+                  <p id="json_input"></p>
+              </div>
+
+              <div class="tab-pane fade" id="copyPaste">
+                  <textarea class="tab" id="csv_input" cols="20" rows="5"></textarea>
+                <br></br>
+                <div class="btn-group" role="group" aria-label="...">
+                  <button type="button" class="btn btn-default btn-sm" onclick="updateCircFromDB()">Generate</button>
+                </div>
+
+              </div>
+             
+              <div class="tab-pane fade" id="tree">
+                <div id="jstree_demo_div"></div>
+              </div>
+
+              <div class="tab-pane fade in active" id="db">
+                <div id= "aa">
+                  <select class="chosen" id="study" onchange="loadStudy()">
+                     <option disabled selected> -- select a study -- </option>
+                      {{#dist_study}}<option>   {{.}}  </option>{{/dist_study}}
+                  </select>
+                  
+                  <select class="chosen" id="studyPatient" onchange="loadStudyPatient()">
+                    <option disabled selected> -- select a sample -- </option> 
+                  </select>
+                  <br></br>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="circ-layers">
+              <div id="accordion"></div>
+            
+              <div id="addLayerForm" >
+                <h4 style='font-weight: bold;'>Add a layer</h4>
+                <div id="AddaLayer">
+                  Name:<br>
+                  <input id="newLayerName" type="text" name="layerName" width="20" size="18"><br>
+                  Type :<br>
+                  <select id="newLayerType" onchange="displayDataId(this)" onfocus="this.selectedIndex = -1;">
+                    <option value="heatmapLayer" name="heatmap">HeatMap</option>
+                    <option value="heatmapTextLayer" name="heatmapText">HeatMap w/ text</option>
+                  </select> 
+                  <br>
+                  Data:<br>
+                  <select id="newLayerData"></select><br>
+                  Placement ( 0-440):<br><input id="newLayerPlacement" type="number" name="layerPlacement" width="20" size="5"><br>
+                  Opacity:<br>
+                  <input id="newLayerOpacity" type="number" name="layerOpacity" width="20" size="5"><br>
+                  Width:<br>
+                  <input id="newLayerWidth" type="number" name="layerWidth" width="20" size="5"><br>
+                  <br> <p style="color:red;" id="newLayerError"> </p>
+                  <br> <input type="submit" value="Submit" onclick="addNewLayer()">
+                </div>
+
+            </div>
+          </div>
+
+
+
+          <div class="tab-pane fade" id="circ-thresholds">
+             <h4 style='font-weight: bold;'>Thresholds</h4>
+             <div id="thresholds"></div>
+
+             <div id="addThresholdForm" >
+                <h4 style='font-weight: bold;'>Add a threshold/filter</h4>
+                <div id="AddThreshold">
+                  Name:<br>
+                  <input id="newThresholdName" type="text" name="thresholdName" width="20" size="18"><br>
+                  Type :<br>
+                  <select id="newThresholdType" onchange="thresholdType(this)" onfocus="this.selectedIndex = -1;">
+                    <option value="checkbox" name="checkbox">Checkbox (boolean)</option>
+                    <option value="range" name="range">Slider (range)</option>
+                  </select> 
+                  <br>
+                  <br>Fields:
+                    <select id="newThresholdFields"></select><br>
+                  <div id="thresholdRangeOptions" style="display:none;">
+                    Start Value: <input id="newThresholdValue" type="number" name="thresholdStartValue" size="5"><br>
+                    Min Value:
+                    <input id="newThresholdMinValue" type="number" name="thresholdMinValue" size="5"><br>
+                    Max Value:
+                    <input id="newThresholdMaxValue" type="number" name="thresholdMaxValue" size="5"><br>
+                    Step Value:
+                    <input id="newThresholdStepValue" type="number" name="thresholdStepValue" size="5"><br>
+                  </div>
+
+                  <div id="thresholdCheckboxOptions" style="display:none;">
+                     Checked?
+                     <input type="radio" name="checkboxVal" value="yes"> Yes
+                     <input type="radio" name="checkboxVal" value="no"> No 
+                  </div>
+                  <br> <p style="color:red;" id="newThresholdError"> </p>
+                  <br> <input type="submit" value="Submit" onclick="addNewThreshold()">
+                </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="circ-data">
+
+           <div id="dataTab">
+                <div class="accordionContainer">
+                  <div id="labelDataAccordion">
+                    <h4 style='font-weight: bold;'>Labels</h4>
+                    <div id="labelData" class style="display:none;">
+                      <input type="text" id="search" placeholder="Type to search..." />
+                      <ul id="labelListHeader">
+                        <li class="col0">
+                          <input id="displayAllLabels" type="checkbox" onclick="displayAllLabels(this)"></input>
+                        </li>
+                        <li class="col1">
+                          <input id="colorChooser" type="color" onchange="changeLabelColors(this)"></input>
+                        </li>
+                        <li class="col2"> Text</li>
+                        <li class="col3">
+                          <input id="labelTextSize" type="number" maxLength="2" size="2" oninput="changeAllLabelTextSize(this)"></input>
+                        </li>
+                        <li class="col4"> 
+                      </ul>
+                      <ul id="labelList" class="list">
+                      </ul>
+                    </div>
+                  </div>
+               
+                  <div id="addALabelForm">
+                    <h4>Add a label</h4>
+                    <div id="addalabel">
+                      Name:<br>
+                      <input id="newLabelName" type="text" name="name" size="18"><br><br>
+                      Chromosome Position (ex. 1:500):
+                      <input id="newLabelChrPos" type="text" name="labelChr" size="18"><br><br>
+                         or <br><br>
+                      Radial Position (0-360):<br>
+                      <input id="newLabelPos" type="number" name="position" size="18"><br><br>
+                      Attributes - use this format {name:value,name2:value2,...} -<br>
+                      Ex. {"qual":55, "gene":"PTEN"}
+                      <input id="newLabelAttr" type="text" name="attributes"><br>
+                      <input type="submit" value="Submit" onclick="addNewLabel()">
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="circ-save">
+            <div id="save">
+              <section>
+                <br>
+                </br>
+                <h4>Save</h4>
+                <input id="inputFileNameToSaveAs">Filename</input>
+                <br></br>
+                <button onclick="saveTextAsFile()">Save Template to File</button>
+                <button id="generate">Save as SVG</button>
+                <form id="svgform" method="post" action="download.pl">
+                   <input type="hidden" id="output_format" name="output_format" value="">
+                   <input type="hidden" id="data" name="data" value="">
+                </form>
+              </section>
+            </div>
+          </div>
+
+        </div>
+      </div>
+ 
+    </div>
+ <div class="col-xs-7">
+  <div id="tooltip">
+    <p><span id="value">Note: Text Labels can be dragged</span></p>
+  </div>
+  <g>
+    <div id="circ"></div>
+  </g>
+ </div>
+ <div class="col-xs-2">
+
+ </div>
+</div>
+
+</div>
+
+
+
+<script src="/javascripts/d3.v3.min.js"></script>
+<script src="/javascripts/jquery-2.1.1.js"></script>
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/chosen.jquery.min.js"></script>
+<script src="/javascripts/chosen.jquery.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://gabelerner.github.io/canvg/rgbcolor.js"></script> 
+<script type="text/javascript" src="https://gabelerner.github.io/canvg/StackBlur.js"></script>
+<script type="text/javascript" src="https://gabelerner.github.io/canvg/canvg.js"></script>
+<script type="text/javascript" src="/javascripts/FileSaver.js"></script>
+<script type="text/javascript" src="/javascripts/mongoParser.js"></script>
+<script type="text/javascript" src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script type="text/javascript" src="/javascripts/list.js"></script>
+<script src="/javascripts/jstree/jstree.min.js"></script>
+<script type="text/javascript" src="/javascripts/mongoParser.js"></script>
+
+<script type="text/javascript" src="/javascripts/circ.js">
+
+</script>
+
+
+
+
+</body>
+
+
+</html>

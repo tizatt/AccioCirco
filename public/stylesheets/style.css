@@ -1,0 +1,76 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+textarea  {
+	height: 48em !important;
+	font-size:x-small !important;
+}
+
+circle:hover {
+        fill: black !important;
+}
+
+#zz {
+	font-size:x-small;
+	height:82em;
+}
+
+.pagination li {
+    display:inline-block;
+    margin:0 auto;
+    height:auto;
+}
+
+.list li{
+    margin:0 auto;
+    height:auto;
+}
+
+.ui-tabs .ui-tabs-panel{
+	padding: .2em .2em !important;
+}
+
+.accord_wrapper{
+ 	width:480px;
+    margin: 10px auto; 
+    font-size:7px;
+}
+
+.tab-content{
+	font-size:x-small;
+}
+
+.db_select{
+	font-size:small;
+	padding:8px 0 0 2px;
+}
+
+.venntooltip {
+  position: absolute;
+  text-align: center;
+  width: 128px;
+  height: 24px;
+  background: #333;
+  color: #ddd;
+  padding: 2px;
+  border: 0px;
+  border-radius: 8px;
+  opacity: 0;
+}
+
+.tgenHeader{
+
+  display:inline-block;
+}
+
+#accordion p{
+  word-break: break-all;
+}
+
+
+

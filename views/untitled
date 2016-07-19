@@ -1,0 +1,230 @@
+
+Below is a JSON object with multiple levels of nesting. First, a tutorial, and an example at the end.
+
+The top level objects are :
+
+settings,
+layer1,
+layer2,
+layer3
+
+These correspond to:
+
+stylistic changes for text,
+the outer most "band" or "layer" of the SVG image,
+the middle "band" or "layer",
+and the inner most layer
+
+respectively.
+
+
+
+
+Layer1 contains a content array. This array in turn contains more JSON objects; these objects correspond to "segments" of the outermost layer. They contain "start" and "end" keywords,
+which have values ranging from 1-360 degrees. This tells the tool where to start drawing the segment and where to stop.
+
+Additional keys for layer 1:
+
+color,
+stroke (outline),
+strokewidth,
+
+text -- > an Array, which contains more JSON objects; these objects correspond to text elements that will float outside of a segment. By default, a text element is placed at the _start_ position of a segment. Using offsets (from 0, being start, to 1, being end), you can then manually shift text along the outside of the plot.
+
+
+
+
+
+Layer 2 contains a content array just like Layer 1, but its components are slightly different. Start and stop work the same way. So does styling (color, stroke, strokewidth). However, it also contains a key, "value". Value can be thought of as a way to represent scatter plots.
+
+If you do not supply an integer for "value", a simple black line will be rendered. A positive value raises the thickness of the line _outwards_ from the center of the SVG. A negative value also thickens the line, but _inwards_ towards the center.
+
+
+
+Layer 3 contains a content array just like Layer 1, but its components are slightly different. Start and stop work the same way. So does styling (color, stroke, strokewidth). Further, layer 3 also has the ability to add values like in Layer 2.
+
+However, layer 3 also contains "connections". These start at 1 and go to any desired number of connections.
+
+Two segments annotated with "connection": 1 for example, will be connected. If you add a third element with connection:1, it will also be connected to that set. "connection" : 2 will be a different set of connections, and so on.
+
+Offets work like offets in layer 1, except for lines instead of text. Lines are drawn to the beginning of the segment (lowest degrees) with an offset value of 0.0, and move along the segment as the offset is increased to 1.0.
+
+Example:
+
+
+
+
+
+{  
+   "settings":{  
+      "font":"helvetica",
+      "fontSize":"11px",
+      "padAngle":0,
+      "textDistance":-4
+   },
+   "layer1":{  
+      "content":[  
+         {  
+            "start":10,
+            "end":90,
+            "color":"red",
+            "stroke":"black",
+            "strokewidth":4,
+            "text":[  
+               {  
+                  "val":"this is a test",
+                  "offset":0.1
+               },
+               {  
+                  "val":"this is a test",
+                  "offset":0.2
+               },
+               {  
+                  "val":"this is a test",
+                  "offset":0.3
+               }
+            ]
+         },
+         {  
+            "start":90,
+            "end":180,
+            "color":"indigo",
+            "text":[  
+               {  
+                  "val":"this is a test",
+                  "offset":0.1
+               },
+               {  
+                  "val":"this is a test",
+                  "offset":0.2
+               },
+               {  
+                  "val":"this is a test",
+                  "offset":0.3
+               }
+            ]
+         },
+         {  
+            "start":180,
+            "end":340,
+            "color":"green",
+            "text":[  
+               {  
+                  "val":"text can be offset to your liking",
+                  "offset":0
+               },
+               {  
+                  "val":"so this way",
+                  "offset":0.5
+               },
+               {  
+                  "val":"the power is yours",
+                  "offset":1
+               }
+            ]
+         }
+      ]
+   },
+   "layer2":{  
+      "content":[  
+         {  
+            "start":1,
+            "end":40,
+            "color":"teal",
+            "value":2
+         },
+         {  
+            "start":40,
+            "end":92,
+            "color":"indigo",
+            "value":-2
+         },
+         {  
+            "start":100,
+            "end":140,
+            "color":"#6633FF",
+            "value":2
+         },
+         {  
+            "start":150,
+            "end":190,
+            "color":"orange",
+            "value":2,
+            "stroke":"blue",
+            "strokewidth":5
+         },
+         {  
+            "start":200,
+            "end":240,
+            "value":1
+         },
+         {  
+            "start":240,
+            "end":260,
+            "value":-2
+         },
+         {  
+            "start":260,
+            "end":360,
+            "color":"#6633FF",
+            "value":2
+         }
+      ]
+   },
+   "layer3":{  
+      "content":[  
+         {  
+            "start":10,
+            "end":40,
+            "value":-2,
+            "connection":1
+         },
+         {  
+            "start":44,
+            "end":55,
+            "color":"#00FF66",
+            "value":2
+         },
+         {  
+            "start":60,
+            "end":80,
+            "value":2,
+            "connection":2
+         },
+         {  
+            "start":60,
+            "end":84,
+            "value":-2,
+            "connection":3
+         },
+         {  
+            "start":89,
+            "end":145,
+            "value":-2,
+            "connection":1,
+            "offset":0.2
+         },
+         {  
+            "start":160,
+            "end":220,
+            "value":2
+         },
+         {  
+            "start":220,
+            "end":340,
+            "value":1,
+            "connection":3,
+            "offset":0.754,
+            "color":"indigo",
+            "stroke":"yellow",
+            "strokewidth":2
+         },
+         {  
+            "start":341,
+            "end":350,
+            "value":-1,
+            "connection":2
+         }
+      ]
+   }
+}

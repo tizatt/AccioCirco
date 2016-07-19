@@ -1,0 +1,236 @@
+
+<html>
+  <head>
+    <title>tgen intersection tool</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/jquery-ui.css">
+    <link rel='stylesheet' href='/stylesheets/chosen.min.css' />
+    
+
+  </head>
+
+
+  <body>
+
+
+<div class="container">
+
+  <a href="/">home</a>
+
+<div class="row">
+  <div class="col-xs-2">
+    <div class="tgenHeader">
+      <img src="/images/TGEN_LOGO.png"/>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+<div class="row">
+
+  <div class="col-xs-4">
+
+
+
+
+<div class="tabbable boxed parentTabs">
+    <ul class="nav nav-tabs">
+        
+
+        <li class="active"><a href="#set1" onclick="from_csv()">From Gene List CSV</a>
+        </li>
+
+        <li><a href="#set2" onclick="fromDb()">From DB</a>
+        </li>
+
+
+        
+        
+    </ul>
+
+
+    <div class="tab-content">
+
+
+
+      <div class="tab-pane fade active in" id="set1">
+            <div class="tabbable">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#sub21">List A</a>
+                    </li>
+                    <li><a href="#sub22">List B</a>
+                    </li>
+                    <li><a href="#sub23">List C</a>
+                    </li>
+                    <li><a href="#sub24">List D</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="sub21">
+                        <textarea id="gl1" class="form-control">a,b,c,d,f
+                          </textarea>
+
+                    </div>
+                    <div class="tab-pane fade" id="sub22">
+                        <textarea id="gl2" class="form-control">a,b,c,e,eg,h
+                        </textarea>
+
+                    </div>
+                    <div class="tab-pane fade" id="sub23">
+                        <textarea id="gl3" class="form-control">z,s,w,f,a
+                        </textarea>
+                    </div>
+
+                    <div class="tab-pane fade" id="sub24">
+                        <textarea id="gl4" class="form-control"></textarea>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="set2">
+            <div class="db_select">
+              <p> Select DB: <select id="selectDb" > </select> <button onclick="getSampleList()" class="btn btn-default btn-sm">Get Samples</button></p>
+            </div>
+              <p id="loading"> error... </p>
+              <select multiple class="chosen-select" id="zz" data-placeholder="Choose up to 4 projectRuns"><option disabled selected> -- Get samples, then select a projectRun -- </option></select>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<div class="col-xs-8">
+
+
+
+<div class="row text-center">
+ 
+
+
+<h3 id="identical"></h3>
+<div id="in_db_tab" style="margin-top:12px;">
+
+
+
+<div id="chosen"></div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div id="in_csv_tab" class="text-center">
+<button onclick="geneList()" class="btn btn-primary" style="margin-top:8px;"> Submit Gene List </button>
+</div>
+
+
+
+<div class="text-center">
+
+<div id="query_db">
+    <form>
+      <select name="dropdown" id="ddlViewBy">
+      <option value="gene">gene</option>
+      <option value="biomarker">biomarker</option>
+      <option value="effect">effect</option>
+      <option value="aberration.aberration_type">aberration type</option>
+
+      </select>
+      <button id="somebutton" type="button" style="margin-top:8px;">Find Intersection!</button>
+      <div id="load_icon"><img src="http://www.cieh.org/MyCIEH/images/loading.gif"/> </div>
+
+    </form>
+</div>
+      
+      <div class="dynamic"></div>
+
+
+
+<div class="accord_wrapper">
+
+
+<div id="accordion">
+
+        <h3>List A</h3>
+        <div id="cA">
+          <h5></h5>
+          <p></p>
+        </div>
+  
+        <h3>List B</h3>
+        <div id="cB">
+          <h5></h5>
+          <p></p>
+        </div>
+
+        <h3>List C</h3>
+        <div id="cC">
+          <h5></h5>
+          <p></p>
+        </div>
+
+    
+
+</div>
+
+
+
+</div>
+
+<button type="button" onclick="prep_export()">Export lists</button>
+<button id="save">Export venn as .png</button>
+<button id="save_as_svg">Export venn as SVG</button>
+
+<form id="svg_export_form" method="POST" style="display:none;visibility:hidden">
+    <input type="hidden" name="svg" />
+</form>
+
+<div id="pngdataurl"></div>
+<canvas width="960" height="500" style="display:none"></canvas>
+
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+</body>
+
+
+
+<script src="/javascripts/d3.v3.min.js"></script>
+<script src="/javascripts/venn.js"></script>
+<script src="/javascripts/jquery-2.1.1.js"></script>
+<script src="/javascripts/chosen.jquery.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/jquery-ui.js"></script>
+<script src="/javascripts/intersectionClient.js"></script>
+<script src="/javascripts/listPopulation.js"></script>
+
+
+</html>

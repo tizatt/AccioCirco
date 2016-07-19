@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>tgen intersection tool</title>
+    <link rel='stylesheet' href='/stylesheets/index.css'/>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+
+<style>
+
+.icon{
+	width: 128px;
+	height: auto;
+}
+.tool{
+	border: 1px solid lightgrey;
+	min-height:220px;
+	padding: 10px 0 0 0;
+}
+
+.tool:hover{
+	background:LightBlue;
+}
+
+.tool a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 10; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.tool img{
+	max-height: 120px;
+    max-width: 320px;
+    display:block;
+    margin:auto;
+    vertical-align: middle;
+    padding:16px 0 0 0;
+}
+.helper {
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+}
+
+</style>
+
+  </head>
+
+<div class="container text-center">
+
+	<div class="row">
+			<img src ="https://www.tgen.org/media/58629/TGEN_LOGO.png"/>
+			<h2> NGS-TOOLS </h2>
+	</div>
+
+
+	<div class="row">
+
+		<div class="col-xs-4 tool">
+				<b>EulerPlotter</b>
+				<a href="/ia"></a><br>
+				<img src="/images/venn.png"/>
+		</div>
+		
+		<div class="col-xs-4 tool">
+				<b>DiskTreeView</b>
+				<a href="/tml"></a><br>
+				<img src="/images/treemap.png"/>
+		</div>
+
+		<div class="col-xs-4 tool">
+				<b>TGenLollipop</b>
+				<a href="/lol"></a><br>
+				 <span class="helper"></span><img src="/images/lollipop_example.png"/>
+		</div>
+
+		
+	</div>
+
+	<div class="row">
+
+		<div class="col-xs-4 tool">
+			<b>BandedGram</b>
+			<a href="/circ"></a><br>
+			<span class="helper"></span><img src="/images/Fibonacci_Circle_1.jpg" />
+		</div>
+	</div>
+
+
+
+
+
+</div>
+
+
+</html>

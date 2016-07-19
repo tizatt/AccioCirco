@@ -1,0 +1,22 @@
+{
+  "name": "Monolith",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "compression": "^1.5.0",
+    "debug": "*",
+    "express": "^5.0.0-alpha.1",
+    "hjs": "*",
+    "lodash": "^3.9.3",
+    "mongodb": "^2.1.0-alpha",
+    "morgan": "*",
+    "querystring": "*",
+    "request": "*",
+    "underscore": "*",
+    "url": "*"
+  }
+}

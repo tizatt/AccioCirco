@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel='stylesheet' href="/stylesheets/lollipopInterface.css" />
+    <link rel='stylesheet' href='/stylesheets/chosen.min.css' />
+    
+  </head>
+  <body>
+    
+  <div class="container-fluid">
+
+    <a href="/">home</a>
+
+    <h1 id="aaa"></h1>
+    <div class="spinner"></div>
+
+    <div class="row">
+
+      <div class="col-xs-12">
+
+      <div class="format">
+        <h5> pick a study, or switch to projectRun: </h5>
+      
+      <form>
+        <input type="radio" name="up" value="study" checked> Study
+        <input type="radio" name="up" value="projectRun"> ProjectRun<br><br>
+      </form>
+      
+      <div id= "aa">
+        <select class="chosen-select" id="prs" onchange="findGenes()"> 
+          <option disabled selected> -- select a study -- </option>
+           {{#dist_prs}}<option>   {{.}}  </option>{{/dist_prs}}
+        </select>
+
+      </div>
+
+      <div id = "bb">
+
+        <select multiple class="chosen-select" id="__prs" data-placeholder="Choose one or several projectRuns"> 
+           {{#__dist_prs}}<option>   {{.}}  </option>{{/__dist_prs}}
+        </select> <br><br>
+
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default btn-sm" onclick="findGenes(1)">Get Lollipops</button>
+        </div>
+
+      </div>
+      
+      </div>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+
+      <div class="col-xs-12">
+
+        <div id="tog">
+        <div class="format">
+          <h5> pick gene </h5>
+
+          <div id="g">
+          <select id="genes" onchange="geneSelected()"> 
+            <option disabled selected> -- select a gene -- </option>  
+          </select>
+        </div>
+
+        <div id="g2">
+
+          <select id="genes2" onchange="geneSelected()"> 
+            <option disabled selected> -- select a gene -- </option>  
+          </select>
+
+        </div>
+
+        </div>
+        </div>
+
+      </div>  
+
+
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+            <div id="mysvg"></div>
+      </div>
+    </div>
+
+
+
+    </div>
+
+
+<div id="scroller">
+  <img style="float:left;" id="left-button" src="/images/Left_arrow.svg"/>
+  <img style="float:right;" id="right-button" src="/images/Right_arrow.svg"/>
+</div>
+
+  </div>
+
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/chosen.jquery.min.js"></script> 
+<script src="/javascripts/lollipopInterface.js"></script>
+
+
+  </body>
+
+ 
+</html>

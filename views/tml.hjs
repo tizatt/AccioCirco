@@ -1,0 +1,87 @@
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="stylesheets/cb.css" />
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+
+    <script type="text/javascript" src="javascripts/d3.js"></script>
+    <script type="text/javascript" src="javascripts/d3.layout.js"></script>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/treemap.js"></script>
+
+
+</head>
+
+<body>
+    <div id="body">
+
+
+        <div class="container">
+
+            <a href="/">home</a>
+
+            <div class="spinner"></div>
+
+                <div id="popup1" class="overlay" onclick="exit()">
+                    <div class="popup">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <img src="images/folder.png" />
+                            </div>
+                            <div class="col-xs-11 pull-left">
+                                <h2>Files</h2>
+                            </div>
+                        </div>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content" id="g1">
+                            Nothing here yet.
+                        </div>
+                    </div>
+                </div>
+        
+
+            <div class="row" id="menu">
+
+                <div class="text-center">
+                    <p> ~~~ new scans appear every Monday ~~~  //runs best on Chrome </p>
+                    <p> <b>black</b> = empty </p>
+                    <p> <b style="color:#ff0000;"> red</b> = duplicates found </p>
+                    <select id="chn" onchange="getDups()" name='image'>
+                        <option value='liang'>/liang</option>
+                        <option value='IVY'>/IVY</option>
+                        <option value='su2c'>/su2c</option>
+                        <option value='ngddata'>/ngddata</option>
+                        <option value='carpten'>/carpten</option>
+                        <option value='trent'>/trent</option>
+                        <option value='MMRF'>/MMRF</option>
+                        <option value='keats'>/keats</option>
+                        <option value='kjensen'>/kjensen</option>
+                        <option value='AshionDrop'>/AshionDrop</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="hi"></div>
+            </div>
+
+
+            <div class="row">
+                <div id="tooltip" class="formatting"></div>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+
+
+
+</html>
