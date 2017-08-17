@@ -10,8 +10,6 @@ then,
 npm start
 
 
-IMPORTANT: This git is merely a portal that links together the apps from this repo: https://github.com/gfrantze/du-df-treemap  and this repo:  https://github.com/gfrantze/Monolith_index
-
 
 patch notes v1.01:
 
